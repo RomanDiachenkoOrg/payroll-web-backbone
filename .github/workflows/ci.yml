@@ -1,0 +1,29 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [20, 22]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: npm
+      - run: npm ci
+      - run: npm run lint
+      - run: npm test
+      - name: Smoke test the server
+        run: |
+          PORT=8080 node server.js &
+          for i in $(seq 1 20); do curl -sf http://localhost:8080/ > /dev/null && break; sleep 0.5; done
+          curl -sf http://localhost:8080/ | grep -q 'data-main="js/main"'
+          curl -sf http://localhost:8080/vendor/backbone/backbone-min.js > /dev/null
+          test "$(curl -s -o /dev/null -w '%{http_code}' http://localhost:8080/api/employees)" = "401"
