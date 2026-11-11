@@ -1,0 +1,27 @@
+{
+  "name": "payroll-web-backbone",
+  "version": "1.4.2",
+  "description": "Payroll web client (Backbone.js / jQuery / RequireJS)",
+  "private": true,
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "seed": "node scripts/build-seed.js",
+    "reset-data": "node scripts/reset-data.js",
+    "lint": "jshint server server.js public/js scripts",
+    "test": "mocha --timeout 10000 --reporter spec \"test/**/*.test.js\""
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "express": "^4.21.2"
+  },
+  "devDependencies": {
+    "chai": "^4.5.0",
+    "jshint": "^2.13.6",
+    "mocha": "^10.8.2",
+    "requirejs": "^2.3.7",
+    "supertest": "^7.0.0"
+  }
+}

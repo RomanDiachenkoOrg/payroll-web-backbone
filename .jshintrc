@@ -1,0 +1,23 @@
+{
+  "browser": true,
+  "node": true,
+  "jquery": true,
+  "undef": true,
+  "unused": "vars",
+  "eqnull": true,
+  "laxbreak": true,
+  "loopfunc": true,
+  "-W018": true,
+  "esversion": 5,
+  "globals": {
+    "define": false,
+    "require": false,
+    "requirejs": false,
+    "describe": false,
+    "it": false,
+    "before": false,
+    "beforeEach": false,
+    "after": false,
+    "afterEach": false
+  }
+}
