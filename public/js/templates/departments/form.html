@@ -1,0 +1,27 @@
+<div class="form-group">
+  <label for="dept-name">Name *</label>
+  <input type="text" class="form-control" id="dept-name" name="name" value="<%- d.name %>" maxlength="60">
+</div>
+<div class="row">
+  <div class="col-sm-6">
+    <div class="form-group">
+      <label for="dept-code">Code *</label>
+      <input type="text" class="form-control" id="dept-code" name="code" value="<%- d.code %>" maxlength="6" style="text-transform: uppercase">
+    </div>
+  </div>
+  <div class="col-sm-6">
+    <div class="form-group">
+      <label for="dept-cost-center">Cost center</label>
+      <input type="text" class="form-control" id="dept-cost-center" name="costCenter" value="<%- d.costCenter %>" maxlength="20">
+    </div>
+  </div>
+</div>
+<div class="form-group">
+  <label for="dept-manager">Manager</label>
+  <select class="form-control" id="dept-manager" name="managerEmployeeId">
+    <option value="">-- None --</option>
+    <% _.each(employees, function (e) { %>
+    <option value="<%- e.id %>" <%= e.id === d.managerEmployeeId ? 'selected' : '' %>><%- e.lastName %>, <%- e.firstName %></option>
+    <% }); %>
+  </select>
+</div>

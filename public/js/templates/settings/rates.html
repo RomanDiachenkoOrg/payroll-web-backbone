@@ -1,0 +1,53 @@
+<form id="rates-form" novalidate>
+  <div class="alert alert-danger form-error hidden" role="alert"></div>
+
+  <h3>Income tax brackets <small>monthly gross, progressive</small></h3>
+  <table class="table table-condensed" id="tax-brackets" style="max-width: 640px">
+    <thead>
+      <tr><th>From (USD)</th><th>To (USD)</th><th>Rate (%)</th><th></th></tr>
+    </thead>
+    <tbody>
+      <% _.each(s.taxBrackets, function (b, i) { var last = i === s.taxBrackets.length - 1; %>
+      <tr>
+        <td><input type="number" class="form-control input-sm" name="from<%- i %>" value="<%- b.from %>" aria-label="Bracket <%- i + 1 %> from" readonly></td>
+        <td>
+          <% if (last) { %>
+            <input type="text" class="form-control input-sm" name="to<%- i %>" value="" placeholder="and above" aria-label="Bracket <%- i + 1 %> to" readonly>
+          <% } else { %>
+            <input type="number" class="form-control input-sm bracket-to" name="to<%- i %>" value="<%- b.to %>" step="0.01" aria-label="Bracket <%- i + 1 %> to">
+          <% } %>
+        </td>
+        <td><input type="number" class="form-control input-sm" name="rate<%- i %>" value="<%- pct(b.rate) %>" step="0.01" min="0" max="100" aria-label="Bracket <%- i + 1 %> rate"></td>
+        <td><% if (s.taxBrackets.length > 1) { %><button type="button" class="btn btn-link btn-xs js-remove-bracket" data-index="<%- i %>">Remove</button><% } %></td>
+      </tr>
+      <% }); %>
+    </tbody>
+  </table>
+  <p><button type="button" class="btn btn-default btn-sm js-add-bracket">Add bracket</button></p>
+
+  <h3>Contributions</h3>
+  <div class="row" style="max-width: 660px">
+    <div class="col-sm-4">
+      <div class="form-group">
+        <label for="social-rate">Social contribution (%)</label>
+        <input type="number" class="form-control" id="social-rate" name="socialRate" value="<%- pct(s.socialRate) %>" step="0.01" min="0" max="100">
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="form-group">
+        <label for="pension-rate">Pension (%)</label>
+        <input type="number" class="form-control" id="pension-rate" name="pensionRate" value="<%- pct(s.pensionRate) %>" step="0.01" min="0" max="100">
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="form-group">
+        <label for="pay-day">Pay day of month</label>
+        <input type="number" class="form-control" id="pay-day" name="payDay" value="<%- s.payDay %>" min="1" max="28">
+      </div>
+    </div>
+  </div>
+
+  <p class="help-block">Changes apply to pay runs calculated after saving. Paid pay runs are not affected.</p>
+  <button type="submit" class="btn btn-primary" id="save-rates">Save settings</button>
+  <button type="button" class="btn btn-link js-reset">Discard changes</button>
+</form>

@@ -1,0 +1,55 @@
+<form class="form-inline filters" id="audit-filter" novalidate>
+  <div class="form-group">
+    <label for="audit-entity">Entity</label>
+    <select class="form-control input-sm" id="audit-entity" name="entity">
+      <option value="">All</option>
+      <% _.each(['Employee', 'Department', 'Timesheet', 'PayRun', 'Settings', 'User'], function (e) { %>
+      <option <%= f.entity === e ? 'selected' : '' %>><%- e %></option>
+      <% }); %>
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="audit-action">Action</label>
+    <select class="form-control input-sm" id="audit-action" name="action">
+      <option value="">All</option>
+      <% _.each(['create', 'update', 'delete', 'deactivate', 'activate', 'salary-change', 'submit', 'approve', 'reject', 'calculate', 'pay', 'login', 'logout'], function (a) { %>
+      <option <%= f.action === a ? 'selected' : '' %>><%- a %></option>
+      <% }); %>
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="audit-user">User</label>
+    <input type="text" class="form-control input-sm" id="audit-user" name="user" value="<%- f.user %>" placeholder="email contains" size="14">
+  </div>
+  <div class="form-group">
+    <label for="audit-from">From</label>
+    <input type="text" class="form-control input-sm" id="audit-from" name="from" value="<%- f.from %>" placeholder="YYYY-MM-DD" size="10">
+  </div>
+  <div class="form-group">
+    <label for="audit-to">To</label>
+    <input type="text" class="form-control input-sm" id="audit-to" name="to" value="<%- f.to %>" placeholder="YYYY-MM-DD" size="10">
+  </div>
+  <button type="submit" class="btn btn-default btn-sm">Filter</button>
+  <button type="button" class="btn btn-link btn-sm js-clear">Clear</button>
+</form>
+
+<table class="table table-condensed table-striped" id="audit-table">
+  <thead>
+    <tr><th>When</th><th>User</th><th>Action</th><th>Entity</th><th>Details</th></tr>
+  </thead>
+  <tbody>
+    <% if (!entries.length) { %>
+      <tr><td colspan="5" class="text-muted">No entries match the filter.</td></tr>
+    <% } %>
+    <% _.each(entries, function (a) { %>
+    <tr>
+      <td class="text-nowrap"><%- fmt.dateTime(a.at) %></td>
+      <td><%- a.userEmail %></td>
+      <td><code><%- a.action %></code></td>
+      <td><%- a.entity %><%- a.entityId ? ' #' + a.entityId : '' %></td>
+      <td><%- a.details %></td>
+    </tr>
+    <% }); %>
+  </tbody>
+</table>
+<p class="text-muted small">Showing the latest <%- entries.length %> entries.</p>

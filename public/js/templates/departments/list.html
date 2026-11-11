@@ -1,0 +1,45 @@
+<div class="page-header">
+  <% if (canEdit) { %>
+  <div class="btn-toolbar pull-right">
+    <button type="button" class="btn btn-primary js-new" id="new-department"><span class="glyphicon glyphicon-plus"></span> New department</button>
+  </div>
+  <% } %>
+  <h1>Departments</h1>
+</div>
+
+<div class="panel panel-default">
+  <table class="table table-striped" id="departments-table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Code</th>
+        <th>Cost center</th>
+        <th>Manager</th>
+        <th class="num">Active employees</th>
+        <th class="num">Total employees</th>
+        <% if (canEdit) { %><th class="text-right"><span class="sr-only">Actions</span></th><% } %>
+      </tr>
+    </thead>
+    <tbody>
+      <% if (!loaded) { %>
+        <tr><td colspan="7" class="text-muted">Loading&hellip;</td></tr>
+      <% } %>
+      <% _.each(departments, function (d) { %>
+      <tr data-id="<%- d.id %>">
+        <td><a href="#employees" class="js-show-employees"><%- d.name %></a></td>
+        <td><code><%- d.code %></code></td>
+        <td><%- d.costCenter %></td>
+        <td><%- managerName(d.managerEmployeeId) %></td>
+        <td class="num"><%- d.activeEmployeeCount %></td>
+        <td class="num"><%- d.employeeCount %></td>
+        <% if (canEdit) { %>
+        <td class="text-right">
+          <button type="button" class="btn btn-default btn-xs js-edit">Edit</button>
+          <button type="button" class="btn btn-danger btn-xs js-delete">Delete</button>
+        </td>
+        <% } %>
+      </tr>
+      <% }); %>
+    </tbody>
+  </table>
+</div>

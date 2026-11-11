@@ -1,0 +1,80 @@
+<div class="page-header">
+  <div class="btn-toolbar pull-right">
+    <button type="button" class="btn btn-default js-print" <%= report ? '' : 'disabled' %>><span class="glyphicon glyphicon-print"></span> Print</button>
+    <button type="button" class="btn btn-default js-export" id="export-report" <%= report && report.rows.length ? '' : 'disabled' %>><span class="glyphicon glyphicon-download-alt"></span> Export CSV</button>
+  </div>
+  <h1>Payroll cost by department</h1>
+</div>
+
+<form class="form-inline filters no-print" id="report-form" novalidate>
+  <div class="form-group">
+    <label for="report-from">From month</label>
+    <input type="text" class="form-control" id="report-from" name="from" value="<%- criteria.from %>" placeholder="YYYY-MM" size="8">
+  </div>
+  <div class="form-group">
+    <label for="report-to">To month</label>
+    <input type="text" class="form-control" id="report-to" name="to" value="<%- criteria.to %>" placeholder="YYYY-MM" size="8">
+  </div>
+  <div class="checkbox">
+    <label><input type="checkbox" name="includeUnpaid" id="report-include-unpaid" <%= criteria.includeUnpaid ? 'checked' : '' %>> Include approved (not yet paid) runs</label>
+  </div>
+  <button type="submit" class="btn btn-primary">Run report</button>
+</form>
+
+<div class="alert alert-danger report-error hidden" role="alert"></div>
+
+<% if (report) { %>
+  <p class="text-muted">
+    <%- fmt.month(report.from) %> &ndash; <%- fmt.month(report.to) %>.
+    <% if (report.payRuns.length) { %>
+      Pay runs included: <%- _.pluck(report.payRuns, 'name').join(', ') %>.
+    <% } else { %>
+      No pay runs in this period.
+    <% } %>
+  </p>
+  <div class="panel panel-default">
+    <table class="table table-striped" id="report-table">
+      <thead>
+        <tr>
+          <th>Department</th>
+          <th class="num">Employees</th>
+          <th class="num">Gross</th>
+          <th class="num">Income tax</th>
+          <th class="num">Social</th>
+          <th class="num">Pension</th>
+          <th class="num">Other</th>
+          <th class="num">Net</th>
+          <th class="num">Employer cost</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% _.each(report.rows, function (r) { %>
+        <tr>
+          <td><%- r.departmentName %></td>
+          <td class="num"><%- r.employees %></td>
+          <td class="num"><%- fmt.money(r.gross) %></td>
+          <td class="num"><%- fmt.money(r.tax) %></td>
+          <td class="num"><%- fmt.money(r.social) %></td>
+          <td class="num"><%- fmt.money(r.pension) %></td>
+          <td class="num"><%- fmt.money(r.other) %></td>
+          <td class="num"><%- fmt.money(r.net) %></td>
+          <td class="num"><%- fmt.money(r.employerCost) %></td>
+        </tr>
+        <% }); %>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td>Total</td>
+          <td class="num"></td>
+          <td class="num"><%- fmt.money(total.gross) %></td>
+          <td class="num"><%- fmt.money(total.tax) %></td>
+          <td class="num"><%- fmt.money(total.social) %></td>
+          <td class="num"><%- fmt.money(total.pension) %></td>
+          <td class="num"><%- fmt.money(total.other) %></td>
+          <td class="num"><%- fmt.money(total.net) %></td>
+          <td class="num"><%- fmt.money(total.employerCost) %></td>
+        </tr>
+      </tfoot>
+    </table>
+  </div>
+<% } %>

@@ -1,0 +1,17 @@
+<table class="table table-striped" id="users-table">
+  <thead>
+    <tr><th>Name</th><th>Email</th><th>Role</th><th>Department</th><th>Last sign-in</th><th>Status</th></tr>
+  </thead>
+  <tbody>
+    <% _.each(users, function (u) { %>
+    <tr>
+      <td><% if (u.employeeId) { %><a href="#employees/<%- u.employeeId %>"><%- u.name %></a><% } else { %><%- u.name %><% } %></td>
+      <td><%- u.email %></td>
+      <td><%- fmt.roleName(u.role) %></td>
+      <td><%- departments.nameOf(u.departmentId) || '-' %></td>
+      <td><%- u.lastLoginAt ? fmt.dateTime(u.lastLoginAt) : 'Never' %></td>
+      <td><span class="label label-<%- u.active ? 'success' : 'default' %>"><%- u.active ? 'Active' : 'Disabled' %></span></td>
+    </tr>
+    <% }); %>
+  </tbody>
+</table>
