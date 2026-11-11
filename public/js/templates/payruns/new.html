@@ -1,0 +1,23 @@
+<div class="form-group">
+  <label for="run-name">Name</label>
+  <input type="text" class="form-control" id="run-name" name="name" placeholder="e.g. <%- suggestedName %>" maxlength="60">
+  <p class="help-block">Leave empty to use the month name.</p>
+</div>
+<div class="row">
+  <div class="col-sm-6">
+    <div class="form-group">
+      <label for="run-period-start">Period start</label>
+      <input type="text" class="form-control" id="run-period-start" name="periodStart" value="<%- periodStart %>" placeholder="YYYY-MM-DD">
+    </div>
+  </div>
+  <div class="col-sm-6">
+    <div class="form-group">
+      <label for="run-period-end">Period end</label>
+      <input type="text" class="form-control" id="run-period-end" name="periodEnd" value="<%- periodEnd %>" placeholder="YYYY-MM-DD">
+    </div>
+  </div>
+</div>
+<div class="form-group">
+  <label for="run-pay-date">Pay date</label>
+  <input type="text" class="form-control" id="run-pay-date" name="payDate" value="<%- payDate %>" placeholder="YYYY-MM-DD">
+</div>

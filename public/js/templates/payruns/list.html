@@ -1,0 +1,45 @@
+<div class="page-header">
+  <% if (canManage) { %>
+  <div class="btn-toolbar pull-right">
+    <button type="button" class="btn btn-primary js-new-run" id="new-payrun"><span class="glyphicon glyphicon-plus"></span> New pay run</button>
+  </div>
+  <% } %>
+  <h1>Pay runs</h1>
+</div>
+
+<div class="panel panel-default">
+  <table class="table table-striped table-hover" id="payruns-table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Period</th>
+        <th>Pay date</th>
+        <th>Status</th>
+        <th class="num">Employees</th>
+        <th class="num">Gross</th>
+        <th class="num">Net</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% if (!loaded) { %>
+        <tr><td colspan="7" class="text-muted">Loading&hellip;</td></tr>
+      <% } else if (!runs.length) { %>
+        <tr><td colspan="7" class="text-muted">No pay runs yet.</td></tr>
+      <% } %>
+      <% _.each(runs, function (r) { %>
+      <tr data-id="<%- r.id %>">
+        <td><a href="#payruns/<%- r.id %>"><%- r.name %></a></td>
+        <td><%- fmt.date(r.periodStart) %> &ndash; <%- fmt.date(r.periodEnd) %></td>
+        <td><%- fmt.date(r.payDate) %></td>
+        <td>
+          <span class="label label-<%- fmt.statusClass(r.status) %> status-label"><%- r.status %></span>
+          <% if (r.status === 'Paid') { %><span class="glyphicon glyphicon-lock text-muted" title="Locked"></span><% } %>
+        </td>
+        <td class="num"><%- r.totals ? r.totals.employees : '' %></td>
+        <td class="num"><%- r.totals && r.status !== 'Draft' ? fmt.money(r.totals.gross) : '-' %></td>
+        <td class="num"><%- r.totals && r.status !== 'Draft' ? fmt.money(r.totals.net) : '-' %></td>
+      </tr>
+      <% }); %>
+    </tbody>
+  </table>
+</div>

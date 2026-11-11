@@ -1,0 +1,57 @@
+<div class="page-header">
+  <div class="btn-toolbar pull-right">
+    <button type="button" class="btn btn-default js-print"><span class="glyphicon glyphicon-print"></span> Print</button>
+    <a href="<%- csvUrl %>" class="btn btn-default" id="payslip-csv" download><span class="glyphicon glyphicon-download-alt"></span> Download CSV</a>
+  </div>
+  <h1>Payslip <small><%- p.payRun.name %></small></h1>
+  <ol class="breadcrumb no-print">
+    <li><a href="#employees/<%- p.employeeId %>"><%- p.employeeName %></a></li>
+    <li class="active">Payslip <%- p.payRun.name %></li>
+  </ol>
+</div>
+
+<div class="payslip" id="payslip">
+  <div class="row">
+    <div class="col-xs-6">
+      <h2>Acme Corp</h2>
+      <p class="text-muted">Payslip for <%- fmt.date(p.payRun.periodStart) %> &ndash; <%- fmt.date(p.payRun.periodEnd) %></p>
+    </div>
+    <div class="col-xs-6 text-right">
+      <p>
+        <strong><%- p.employeeName %></strong><br>
+        <%- p.employee.title %><br>
+        <%- p.employee.departmentName %><br>
+        <span class="text-muted">Employee #<%- p.employeeId %></span>
+      </p>
+      <p>Pay date: <strong><%- fmt.date(p.payRun.payDate) %></strong></p>
+    </div>
+  </div>
+
+  <table class="table" id="payslip-breakdown">
+    <thead>
+      <tr><th>Description</th><th class="num">Quantity</th><th class="num">Rate</th><th class="num">Amount (USD)</th></tr>
+    </thead>
+    <tbody>
+      <% if (p.payType === 'hourly') { %>
+        <tr><td>Regular hours</td><td class="num"><%- fmt.hours(p.regularHours) %></td><td class="num"><%- fmt.money(p.rate) %></td><td class="num"><%- fmt.money(regularPay) %></td></tr>
+        <% if (p.overtimeHours) { %>
+        <tr><td>Overtime (x1.5)</td><td class="num"><%- fmt.hours(p.overtimeHours) %></td><td class="num"><%- fmt.money(p.rate * 1.5) %></td><td class="num"><%- fmt.money(overtimePay) %></td></tr>
+        <% } %>
+      <% } else { %>
+        <tr><td>Monthly salary</td><td class="num">1</td><td class="num"></td><td class="num"><%- fmt.money(p.gross) %></td></tr>
+      <% } %>
+      <tr class="active"><td colspan="3"><strong>Gross pay</strong></td><td class="num"><strong><%- fmt.money(p.gross) %></strong></td></tr>
+      <tr><td>Income tax</td><td></td><td></td><td class="num"><%- fmt.money(-p.tax) %></td></tr>
+      <tr><td>Social contribution</td><td></td><td></td><td class="num"><%- fmt.money(-p.social) %></td></tr>
+      <% if (p.pension) { %>
+      <tr><td>Pension</td><td></td><td></td><td class="num"><%- fmt.money(-p.pension) %></td></tr>
+      <% } %>
+      <% _.each(p.deductions, function (d) { %>
+      <tr><td><%- d.name %></td><td></td><td></td><td class="num"><%- fmt.money(-d.amount) %></td></tr>
+      <% }); %>
+      <tr><td colspan="3">Total deductions</td><td class="num"><%- fmt.money(-totalDeductions) %></td></tr>
+      <tr class="net-row"><td colspan="3">Net pay</td><td class="num" id="payslip-net"><%- fmt.money(p.net) %></td></tr>
+    </tbody>
+  </table>
+  <p class="small text-muted">Pay run status: <%- p.payRun.status %>. Amounts in USD.</p>
+</div>
