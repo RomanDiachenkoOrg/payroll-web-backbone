@@ -1,0 +1,100 @@
+<div class="page-header">
+  <h1><%- isNew ? 'New employee' : 'Edit ' + e.firstName + ' ' + e.lastName %></h1>
+</div>
+
+<form id="employee-form" class="form-horizontal" novalidate>
+  <div class="alert alert-danger form-error hidden" role="alert"></div>
+
+  <fieldset>
+    <legend>Personal details</legend>
+    <div class="form-group">
+      <label for="emp-first-name" class="col-sm-2 control-label">First name *</label>
+      <div class="col-sm-4"><input type="text" class="form-control" id="emp-first-name" name="firstName" value="<%- e.firstName %>" maxlength="60"></div>
+      <label for="emp-last-name" class="col-sm-2 control-label">Last name *</label>
+      <div class="col-sm-4"><input type="text" class="form-control" id="emp-last-name" name="lastName" value="<%- e.lastName %>" maxlength="60"></div>
+    </div>
+    <div class="form-group">
+      <label for="emp-email" class="col-sm-2 control-label">Email *</label>
+      <div class="col-sm-4"><input type="email" class="form-control" id="emp-email" name="email" value="<%- e.email %>"></div>
+      <label for="emp-phone" class="col-sm-2 control-label">Phone</label>
+      <div class="col-sm-4"><input type="tel" class="form-control" id="emp-phone" name="phone" value="<%- e.phone %>"></div>
+    </div>
+  </fieldset>
+
+  <fieldset>
+    <legend>Employment</legend>
+    <div class="form-group">
+      <label for="emp-department" class="col-sm-2 control-label">Department *</label>
+      <div class="col-sm-4">
+        <select class="form-control" id="emp-department" name="departmentId">
+          <option value="">-- Select --</option>
+          <% _.each(departments, function (d) { %>
+          <option value="<%- d.id %>" <%= d.id === e.departmentId ? 'selected' : '' %>><%- d.name %></option>
+          <% }); %>
+        </select>
+      </div>
+      <label for="emp-title" class="col-sm-2 control-label">Job title</label>
+      <div class="col-sm-4"><input type="text" class="form-control" id="emp-title" name="title" value="<%- e.title %>"></div>
+    </div>
+    <div class="form-group">
+      <label for="emp-hire-date" class="col-sm-2 control-label">Hire date *</label>
+      <div class="col-sm-4"><input type="date" class="form-control" id="emp-hire-date" name="hireDate" value="<%- e.hireDate %>" placeholder="YYYY-MM-DD"></div>
+    </div>
+  </fieldset>
+
+  <fieldset>
+    <legend>Pay</legend>
+    <div class="form-group">
+      <span class="col-sm-2 control-label"><strong>Pay type</strong></span>
+      <div class="col-sm-4">
+        <label class="radio-inline"><input type="radio" name="payType" id="emp-paytype-salaried" value="salaried" <%= e.payType !== 'hourly' ? 'checked' : '' %>> Salaried</label>
+        <label class="radio-inline"><input type="radio" name="payType" id="emp-paytype-hourly" value="hourly" <%= e.payType === 'hourly' ? 'checked' : '' %>> Hourly</label>
+      </div>
+    </div>
+    <div class="form-group salary-group">
+      <label for="emp-salary" class="col-sm-2 control-label">Annual salary *</label>
+      <div class="col-sm-4">
+        <div class="input-group"><span class="input-group-addon">$</span>
+          <input type="number" min="0" step="100" class="form-control" id="emp-salary" name="annualSalary" value="<%- e.annualSalary %>">
+        </div>
+      </div>
+    </div>
+    <div class="form-group rate-group hidden">
+      <label for="emp-rate" class="col-sm-2 control-label">Hourly rate *</label>
+      <div class="col-sm-4">
+        <div class="input-group"><span class="input-group-addon">$</span>
+          <input type="number" min="0" step="0.25" class="form-control" id="emp-rate" name="hourlyRate" value="<%- e.hourlyRate %>">
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="col-sm-offset-2 col-sm-10">
+        <div class="checkbox">
+          <label><input type="checkbox" name="pensionOptIn" id="emp-pension" <%= e.pensionOptIn ? 'checked' : '' %>> Enrolled in the pension plan</label>
+        </div>
+      </div>
+    </div>
+  </fieldset>
+
+  <fieldset>
+    <legend>Recurring deductions</legend>
+    <div class="row">
+      <div class="col-sm-offset-2 col-sm-6">
+        <table class="table table-condensed">
+          <thead><tr><th>Type</th><th class="num">Monthly amount</th><th></th></tr></thead>
+          <tbody id="deduction-rows"></tbody>
+        </table>
+        <p class="text-muted no-deductions">No recurring deductions.</p>
+        <button type="button" class="btn btn-default btn-sm js-add-deduction"><span class="glyphicon glyphicon-plus"></span> Add deduction</button>
+      </div>
+    </div>
+  </fieldset>
+
+  <hr>
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <button type="submit" class="btn btn-primary" id="save-employee">Save</button>
+      <a href="#" class="btn btn-link js-cancel">Cancel</a>
+    </div>
+  </div>
+</form>

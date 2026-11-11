@@ -1,0 +1,16 @@
+<tr>
+  <td>
+    <label class="sr-only" for="deduction-type-<%- index %>">Deduction type</label>
+    <select class="form-control input-sm deduction-type" id="deduction-type-<%- index %>">
+      <option value="">-- Select --</option>
+      <% _.each(types, function (t) { %>
+      <option value="<%- t.id %>" <%= t.id === d.typeId ? 'selected' : '' %>><%- t.name %></option>
+      <% }); %>
+    </select>
+  </td>
+  <td>
+    <label class="sr-only" for="deduction-amount-<%- index %>">Amount</label>
+    <input type="number" min="0" step="0.01" class="form-control input-sm deduction-amount text-right" id="deduction-amount-<%- index %>" name="deduction<%- index %>" value="<%- d.amount %>">
+  </td>
+  <td><button type="button" class="btn btn-link btn-sm js-remove-deduction" aria-label="Remove deduction"><span class="glyphicon glyphicon-trash"></span></button></td>
+</tr>

@@ -1,0 +1,58 @@
+<div class="page-header">
+  <% if (canEdit) { %>
+  <div class="btn-toolbar pull-right">
+    <a href="#employees/new" class="btn btn-primary" id="new-employee"><span class="glyphicon glyphicon-plus"></span> New employee</a>
+  </div>
+  <% } %>
+  <h1>Employees</h1>
+</div>
+
+<form class="form-inline filters" role="search" onsubmit="return false;">
+  <div class="form-group">
+    <label class="sr-only" for="employee-search">Search</label>
+    <input type="search" class="form-control" id="employee-search" placeholder="Search name, email or title" value="<%- criteria.q %>">
+  </div>
+  <div class="form-group">
+    <label for="filter-department">Department</label>
+    <select class="form-control" id="filter-department">
+      <option value="">All departments</option>
+      <% _.each(departments, function (d) { %>
+      <option value="<%- d.id %>" <%= String(criteria.departmentId) === String(d.id) ? 'selected' : '' %>><%- d.name %></option>
+      <% }); %>
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="filter-status">Status</label>
+    <select class="form-control" id="filter-status">
+      <option value="active" <%= criteria.status === 'active' ? 'selected' : '' %>>Active</option>
+      <option value="inactive" <%= criteria.status === 'inactive' ? 'selected' : '' %>>Inactive</option>
+      <option value="all" <%= criteria.status === 'all' ? 'selected' : '' %>>All</option>
+    </select>
+  </div>
+</form>
+
+<div class="panel panel-default">
+  <table class="table table-striped table-hover" id="employees-table">
+    <thead>
+      <tr>
+        <th class="sortable" data-sort="name">Name</th>
+        <th class="sortable" data-sort="title">Title</th>
+        <th class="sortable" data-sort="department">Department</th>
+        <th class="sortable" data-sort="hireDate">Hire date</th>
+        <th class="sortable num" data-sort="pay">Pay</th>
+        <th>Status</th>
+        <% if (canEdit) { %><th class="text-right"><span class="sr-only">Actions</span></th><% } %>
+      </tr>
+    </thead>
+    <tbody id="employee-rows">
+      <tr><td colspan="7" class="text-muted">Loading&hellip;</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="clearfix">
+  <p class="list-summary text-muted pull-left"></p>
+  <nav class="pull-right" aria-label="Employee pages">
+    <ul class="pagination" style="margin-top: 0"></ul>
+  </nav>
+</div>

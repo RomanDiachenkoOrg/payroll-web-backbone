@@ -1,0 +1,85 @@
+<div class="page-header">
+  <div class="btn-toolbar pull-right">
+    <% if (canEdit) { %>
+      <a href="#employees/<%- e.id %>/edit" class="btn btn-default"><span class="glyphicon glyphicon-pencil"></span> Edit</a>
+      <% if (e.active) { %>
+        <button type="button" class="btn btn-danger js-deactivate">Deactivate</button>
+      <% } else { %>
+        <button type="button" class="btn btn-default js-activate">Reactivate</button>
+      <% } %>
+    <% } %>
+  </div>
+  <h1>
+    <%- fullName %>
+    <small><%- e.title %></small>
+    <% if (!e.active) { %><span class="label label-default">Inactive</span><% } %>
+  </h1>
+  <% if (canEdit) { %><ol class="breadcrumb"><li><a href="#employees">Employees</a></li><li class="active"><%- fullName %></li></ol><% } %>
+</div>
+
+<div class="row">
+  <div class="col-md-5">
+    <div class="panel panel-default">
+      <div class="panel-heading"><h3 class="panel-title">Profile</h3></div>
+      <table class="table" id="employee-profile">
+        <tr><th>Email</th><td><a href="mailto:<%- e.email %>"><%- e.email %></a></td></tr>
+        <tr><th>Phone</th><td><%- e.phone || '-' %></td></tr>
+        <tr><th>Department</th><td><%- departmentName %></td></tr>
+        <tr><th>Hire date</th><td><%- fmt.date(e.hireDate) %></td></tr>
+        <% if (e.terminationDate) { %><tr><th>Left on</th><td><%- fmt.date(e.terminationDate) %></td></tr><% } %>
+        <tr><th>Pay type</th><td><%- e.payType === 'hourly' ? 'Hourly' : 'Salaried' %></td></tr>
+        <tr><th>Current pay</th><td>
+          <% if (e.payType === 'hourly') { %><%- fmt.money(e.hourlyRate) %> per hour<% } else { %><%- fmt.money(e.annualSalary) %> per year<% } %>
+        </td></tr>
+        <tr><th>Pension plan</th><td><%- e.pensionOptIn ? 'Enrolled' : 'Not enrolled' %></td></tr>
+        <tr><th>Deductions</th><td>
+          <% if (!e.deductions.length) { %>None<% } %>
+          <% _.each(e.deductions, function (d) { %>
+            <div><%- deductionTypes.nameOf(d.typeId) %>: <%- fmt.money(d.amount) %>/month</div>
+          <% }); %>
+        </td></tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="col-md-7">
+    <div class="panel panel-default">
+      <div class="panel-heading clearfix">
+        <% if (canRaise) { %><button type="button" class="btn btn-primary btn-xs pull-right js-add-raise">Add raise</button><% } %>
+        <h3 class="panel-title">Salary history</h3>
+      </div>
+      <table class="table table-condensed" id="salary-history">
+        <thead><tr><th>Effective</th><th class="num">Amount</th><th>Reason</th></tr></thead>
+        <tbody>
+          <% _.each(history, function (h) { %>
+          <tr>
+            <td><%- fmt.date(h.effectiveDate) %></td>
+            <td class="num"><%- fmt.money(h.amount) %><%- h.payType === 'hourly' ? '/h' : '/yr' %></td>
+            <td><%- h.reason %></td>
+          </tr>
+          <% }); %>
+          <% if (!history.length) { %><tr><td colspan="3" class="text-muted">No salary history.</td></tr><% } %>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="panel panel-default">
+      <div class="panel-heading"><h3 class="panel-title"><%- isSelf ? 'My payslips' : 'Payslips' %></h3></div>
+      <table class="table table-condensed table-hover" id="employee-payslips">
+        <thead><tr><th>Pay run</th><th>Pay date</th><th class="num">Gross</th><th class="num">Net</th><th></th></tr></thead>
+        <tbody>
+          <% _.each(payslips, function (p) { %>
+          <tr>
+            <td><%- p.payRunName %> <% if (p.status !== 'Paid') { %><span class="label label-<%- fmt.statusClass(p.status) %>"><%- p.status %></span><% } %></td>
+            <td><%- fmt.date(p.payDate) %></td>
+            <td class="num"><%- fmt.money(p.gross) %></td>
+            <td class="num"><%- fmt.money(p.net) %></td>
+            <td class="text-right"><a href="#payslips/<%- p.id %>">View</a></td>
+          </tr>
+          <% }); %>
+          <% if (!payslips.length) { %><tr><td colspan="5" class="text-muted">No payslips yet.</td></tr><% } %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,25 @@
+<% if (!employees.length) { %>
+  <tr><td colspan="7" class="text-muted">No employees found.</td></tr>
+<% } %>
+<% _.each(employees, function (e) { %>
+  <tr class="<%- e.get('active') ? '' : 'inactive' %>" data-id="<%- e.id %>">
+    <td><a href="#employees/<%- e.id %>"><%- e.get('lastName') %>, <%- e.get('firstName') %></a><br><small class="text-muted"><%- e.get('email') %></small></td>
+    <td><%- e.get('title') %></td>
+    <td><%- departments.nameOf(e.get('departmentId')) %></td>
+    <td><%- fmt.date(e.get('hireDate')) %></td>
+    <td class="num">
+      <% if (e.isHourly()) { %><%- fmt.money(e.get('hourlyRate')) %>/h<% } else { %><%- fmt.money(e.get('annualSalary')) %>/yr<% } %>
+    </td>
+    <td><span class="label label-<%- e.get('active') ? 'success' : 'default' %>"><%- e.get('active') ? 'Active' : 'Inactive' %></span></td>
+    <% if (canEdit) { %>
+    <td class="text-right">
+      <a href="#employees/<%- e.id %>/edit" class="btn btn-default btn-xs">Edit</a>
+      <% if (e.get('active')) { %>
+        <button type="button" class="btn btn-danger btn-xs js-deactivate" data-id="<%- e.id %>">Deactivate</button>
+      <% } else { %>
+        <button type="button" class="btn btn-default btn-xs js-activate" data-id="<%- e.id %>">Reactivate</button>
+      <% } %>
+    </td>
+    <% } %>
+  </tr>
+<% }); %>

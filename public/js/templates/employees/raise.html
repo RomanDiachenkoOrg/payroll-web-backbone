@@ -1,0 +1,13 @@
+<p class="text-muted">Current <%- hourly ? 'hourly rate' : 'annual salary' %>: <strong>$<%- current %></strong></p>
+<div class="form-group">
+  <label for="raise-amount">New <%- hourly ? 'hourly rate' : 'annual salary' %> ($)</label>
+  <input type="number" min="0" step="<%- hourly ? '0.25' : '100' %>" class="form-control" id="raise-amount" name="amount">
+</div>
+<div class="form-group">
+  <label for="raise-date">Effective date</label>
+  <input type="date" class="form-control" id="raise-date" name="effectiveDate" value="<%- today %>">
+</div>
+<div class="form-group">
+  <label for="raise-reason">Reason</label>
+  <input type="text" class="form-control" id="raise-reason" name="reason" placeholder="e.g. Annual review, Promotion">
+</div>
