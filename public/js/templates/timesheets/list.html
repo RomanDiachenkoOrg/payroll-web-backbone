@@ -1,0 +1,66 @@
+<div class="page-header">
+  <% if (canCreate) { %>
+  <div class="btn-toolbar pull-right">
+    <a href="#timesheets/new" class="btn btn-primary" id="new-timesheet"><span class="glyphicon glyphicon-plus"></span> New timesheet</a>
+  </div>
+  <% } %>
+  <h1>Timesheets</h1>
+</div>
+
+<form class="form-inline filters" onsubmit="return false;">
+  <div class="form-group">
+    <label for="timesheet-status">Status</label>
+    <select class="form-control" id="timesheet-status">
+      <option value="">All</option>
+      <% _.each(statuses, function (s) { %>
+      <option value="<%- s %>" <%= s === status ? 'selected' : '' %>><%- s %></option>
+      <% }); %>
+    </select>
+  </div>
+</form>
+
+<div class="panel panel-default">
+  <table class="table table-striped" id="timesheets-table">
+    <thead>
+      <tr>
+        <% if (showEmployee) { %><th>Employee</th><% } %>
+        <th>Week of</th>
+        <th class="num">Hours</th>
+        <th class="num">Overtime</th>
+        <th>Status</th>
+        <th class="text-right"><span class="sr-only">Actions</span></th>
+      </tr>
+    </thead>
+    <tbody>
+      <% if (!loaded) { %>
+        <tr><td colspan="6" class="text-muted">Loading&hellip;</td></tr>
+      <% } else if (!timesheets.length) { %>
+        <tr><td colspan="6" class="text-muted">No timesheets<%- status ? ' with status ' + status : '' %>.</td></tr>
+      <% } %>
+      <% _.each(timesheets, function (ts) { %>
+      <tr data-id="<%- ts.id %>">
+        <% if (showEmployee) { %><td><%- ts.get('employeeName') %></td><% } %>
+        <td><a href="#timesheets/<%- ts.id %>"><%- fmt.date(ts.get('weekStart')) %></a></td>
+        <td class="num"><%- fmt.hours(ts.total()) %></td>
+        <td class="num"><%- ts.overtime() ? fmt.hours(ts.overtime()) : '' %></td>
+        <td>
+          <span class="label label-<%- fmt.statusClass(ts.get('status')) %> status-label"><%- ts.get('status') %></span>
+          <% if (ts.get('status') === 'Rejected' && ts.get('rejectReason')) { %>
+            <div class="small text-danger"><%- ts.get('rejectReason') %></div>
+          <% } %>
+        </td>
+        <td class="text-right">
+          <% if (canEdit(ts)) { %>
+            <a href="#timesheets/<%- ts.id %>" class="btn btn-default btn-xs">Edit</a>
+            <button type="button" class="btn btn-primary btn-xs js-submit">Submit</button>
+          <% } %>
+          <% if (ts.get('status') === 'Submitted' && canDecide(ts)) { %>
+            <button type="button" class="btn btn-success btn-xs js-approve">Approve</button>
+            <button type="button" class="btn btn-danger btn-xs js-reject">Reject</button>
+          <% } %>
+        </td>
+      </tr>
+      <% }); %>
+    </tbody>
+  </table>
+</div>

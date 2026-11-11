@@ -1,0 +1,90 @@
+<div class="page-header">
+  <h1>
+    <%- isNew ? 'New timesheet' : 'Timesheet' %>
+    <% if (!isNew) { %><small>week of <%- fmt.date(t.weekStart) %></small>
+      <span class="label label-<%- fmt.statusClass(t.status) %>"><%- t.status %></span><% } %>
+  </h1>
+  <ol class="breadcrumb"><li><a href="#timesheets">Timesheets</a></li><li class="active"><%- isNew ? 'New' : fmt.date(t.weekStart) %></li></ol>
+</div>
+
+<% if (t.status === 'Rejected' && t.rejectReason) { %>
+<div class="alert alert-warning" role="alert">
+  <strong>Rejected by <%- t.decidedBy %>:</strong> <%- t.rejectReason %>
+</div>
+<% } %>
+
+<form id="timesheet-form" novalidate>
+  <div class="alert alert-danger form-error hidden" role="alert"></div>
+
+  <div class="row">
+    <% if (chooseEmployee) { %>
+    <div class="col-sm-4">
+      <div class="form-group">
+        <label for="ts-employee">Employee</label>
+        <select class="form-control" id="ts-employee" name="employeeId" <%= editable ? '' : 'disabled' %>>
+          <option value="">-- Select --</option>
+          <% _.each(employees, function (e) { %>
+          <option value="<%- e.id %>" <%= e.id === t.employeeId ? 'selected' : '' %>><%- e.lastName %>, <%- e.firstName %></option>
+          <% }); %>
+        </select>
+      </div>
+    </div>
+    <% } else if (!isNew) { %>
+    <div class="col-sm-4">
+      <div class="form-group">
+        <label>Employee</label>
+        <p class="form-control-static"><%- t.employeeName %></p>
+      </div>
+    </div>
+    <% } %>
+    <div class="col-sm-3">
+      <div class="form-group">
+        <label for="ts-week-start">Week starting (Monday)</label>
+        <input type="text" class="form-control" id="ts-week-start" name="weekStart" value="<%- t.weekStart %>" placeholder="YYYY-MM-DD" <%= editable ? '' : 'disabled' %>>
+      </div>
+    </div>
+  </div>
+
+  <div class="panel panel-default">
+    <table class="table timesheet-grid">
+      <thead>
+        <tr>
+          <% _.each(days, function (day, i) { %>
+          <th class="num"><label for="ts-hours-<%- i %>"><%- day %></label><div class="day-name"><%- dates[i] %></div></th>
+          <% }); %>
+          <th class="num">Total</th>
+          <th class="num">Overtime</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <% _.each(t.hours, function (h, i) { %>
+          <td class="num"><input type="number" class="form-control input-sm hours-input" id="ts-hours-<%- i %>" name="hours<%- i %>" value="<%- h %>" min="0" max="24" step="0.25" <%= editable ? '' : 'disabled' %>></td>
+          <% }); %>
+          <td class="num"><strong class="ts-total"></strong></td>
+          <td class="num"><span class="ts-overtime"></span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="form-group">
+    <label for="ts-notes">Notes</label>
+    <textarea class="form-control" id="ts-notes" name="notes" rows="2" maxlength="500" <%= editable ? '' : 'disabled' %>><%- t.notes %></textarea>
+  </div>
+
+  <div class="form-actions">
+    <% if (editable) { %>
+      <button type="submit" class="btn btn-default" id="save-timesheet">Save draft</button>
+      <button type="button" class="btn btn-primary js-save-submit" id="submit-timesheet">Save &amp; submit</button>
+      <% if (!isNew && t.status === 'Draft') { %>
+        <button type="button" class="btn btn-link text-danger js-delete">Delete</button>
+      <% } %>
+    <% } %>
+    <% if (canDecide) { %>
+      <button type="button" class="btn btn-success js-approve">Approve</button>
+      <button type="button" class="btn btn-danger js-reject">Reject</button>
+    <% } %>
+    <a href="#timesheets" class="btn btn-link">Back to list</a>
+  </div>
+</form>
