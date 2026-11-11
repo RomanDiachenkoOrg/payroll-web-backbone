@@ -1,0 +1,162 @@
+[
+  {
+    "id": 1,
+    "at": "2026-09-01T08:00:00.000Z",
+    "userId": 1,
+    "userEmail": "admin@acme.test",
+    "action": "create",
+    "entity": "PayRun",
+    "entityId": 1,
+    "details": "September 2026"
+  },
+  {
+    "id": 2,
+    "at": "2026-09-24T10:00:00.000Z",
+    "userId": 1,
+    "userEmail": "admin@acme.test",
+    "action": "calculate",
+    "entity": "PayRun",
+    "entityId": 1,
+    "details": "September 2026"
+  },
+  {
+    "id": 3,
+    "at": "2026-09-25T15:30:00.000Z",
+    "userId": 1,
+    "userEmail": "admin@acme.test",
+    "action": "approve",
+    "entity": "PayRun",
+    "entityId": 1,
+    "details": "September 2026"
+  },
+  {
+    "id": 4,
+    "at": "2026-09-28T07:00:00.000Z",
+    "userId": 1,
+    "userEmail": "admin@acme.test",
+    "action": "pay",
+    "entity": "PayRun",
+    "entityId": 1,
+    "details": "September 2026 marked as paid"
+  },
+  {
+    "id": 5,
+    "at": "2026-09-29T11:12:00.000Z",
+    "userId": 1,
+    "userEmail": "admin@acme.test",
+    "action": "deactivate",
+    "entity": "Employee",
+    "entityId": 15,
+    "details": "Chloe Martin"
+  },
+  {
+    "id": 6,
+    "at": "2026-10-01T08:00:00.000Z",
+    "userId": 1,
+    "userEmail": "admin@acme.test",
+    "action": "create",
+    "entity": "PayRun",
+    "entityId": 2,
+    "details": "October 2026"
+  },
+  {
+    "id": 7,
+    "at": "2026-10-05T13:40:00.000Z",
+    "userId": 1,
+    "userEmail": "admin@acme.test",
+    "action": "salary-change",
+    "entity": "Employee",
+    "entityId": 4,
+    "details": "92300 -> 96000 (Promotion)"
+  },
+  {
+    "id": 8,
+    "at": "2026-10-16T16:20:00.000Z",
+    "userId": 1,
+    "userEmail": "admin@acme.test",
+    "action": "deactivate",
+    "entity": "Employee",
+    "entityId": 6,
+    "details": "Lucas Ferreira"
+  },
+  {
+    "id": 9,
+    "at": "2026-10-24T10:00:00.000Z",
+    "userId": 1,
+    "userEmail": "admin@acme.test",
+    "action": "calculate",
+    "entity": "PayRun",
+    "entityId": 2,
+    "details": "October 2026"
+  },
+  {
+    "id": 10,
+    "at": "2026-10-25T15:30:00.000Z",
+    "userId": 1,
+    "userEmail": "admin@acme.test",
+    "action": "approve",
+    "entity": "PayRun",
+    "entityId": 2,
+    "details": "October 2026"
+  },
+  {
+    "id": 11,
+    "at": "2026-10-28T07:00:00.000Z",
+    "userId": 1,
+    "userEmail": "admin@acme.test",
+    "action": "pay",
+    "entity": "PayRun",
+    "entityId": 2,
+    "details": "October 2026 marked as paid"
+  },
+  {
+    "id": 12,
+    "at": "2026-10-28T09:00:00.000Z",
+    "userId": 2,
+    "userEmail": "manager@acme.test",
+    "action": "reject",
+    "entity": "Timesheet",
+    "entityId": null,
+    "details": "Jake Morrison: Saturday hours were not scheduled"
+  },
+  {
+    "id": 13,
+    "at": "2026-10-30T17:45:00.000Z",
+    "userId": 1,
+    "userEmail": "admin@acme.test",
+    "action": "deactivate",
+    "entity": "Employee",
+    "entityId": 21,
+    "details": "Mia Thompson"
+  },
+  {
+    "id": 14,
+    "at": "2026-11-01T08:00:00.000Z",
+    "userId": 1,
+    "userEmail": "admin@acme.test",
+    "action": "create",
+    "entity": "PayRun",
+    "entityId": 3,
+    "details": "November 2026"
+  },
+  {
+    "id": 15,
+    "at": "2026-11-03T08:55:00.000Z",
+    "userId": 2,
+    "userEmail": "manager@acme.test",
+    "action": "login",
+    "entity": "User",
+    "entityId": 2,
+    "details": "Signed in"
+  },
+  {
+    "id": 16,
+    "at": "2026-11-03T09:10:00.000Z",
+    "userId": 3,
+    "userEmail": "employee@acme.test",
+    "action": "submit",
+    "entity": "Timesheet",
+    "entityId": null,
+    "details": "Week of 2026-11-02"
+  }
+]

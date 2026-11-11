@@ -1,0 +1,540 @@
+[
+  {
+    "id": 1,
+    "firstName": "Michael",
+    "lastName": "Reyes",
+    "email": "manager@acme.test",
+    "phone": "+1 555 0110",
+    "title": "Engineering Manager",
+    "departmentId": 1,
+    "payType": "salaried",
+    "annualSalary": 132000,
+    "hourlyRate": null,
+    "hireDate": "2016-03-14",
+    "active": true,
+    "terminationDate": null,
+    "pensionOptIn": true,
+    "deductions": [
+      {
+        "typeId": 1,
+        "amount": 120
+      },
+      {
+        "typeId": 2,
+        "amount": 25
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "firstName": "Emily",
+    "lastName": "Carter",
+    "email": "employee@acme.test",
+    "phone": "+1 555 0111",
+    "title": "Support Engineer",
+    "departmentId": 1,
+    "payType": "hourly",
+    "annualSalary": null,
+    "hourlyRate": 38.5,
+    "hireDate": "2021-06-01",
+    "active": true,
+    "terminationDate": null,
+    "pensionOptIn": true,
+    "deductions": [
+      {
+        "typeId": 1,
+        "amount": 120
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "firstName": "Daniel",
+    "lastName": "Okafor",
+    "email": "daniel.okafor@acme.test",
+    "phone": "+1 555 0112",
+    "title": "Senior Software Engineer",
+    "departmentId": 1,
+    "payType": "salaried",
+    "annualSalary": 118000,
+    "hourlyRate": null,
+    "hireDate": "2018-09-03",
+    "active": true,
+    "terminationDate": null,
+    "pensionOptIn": true,
+    "deductions": [
+      {
+        "typeId": 1,
+        "amount": 120
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "firstName": "Sofia",
+    "lastName": "Lindqvist",
+    "email": "sofia.lindqvist@acme.test",
+    "phone": "+1 555 0113",
+    "title": "Software Engineer",
+    "departmentId": 1,
+    "payType": "salaried",
+    "annualSalary": 96000,
+    "hourlyRate": null,
+    "hireDate": "2022-01-10",
+    "active": true,
+    "terminationDate": null,
+    "pensionOptIn": false,
+    "deductions": [
+      {
+        "typeId": 1,
+        "amount": 120
+      },
+      {
+        "typeId": 4,
+        "amount": 40
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "firstName": "Arjun",
+    "lastName": "Mehta",
+    "email": "arjun.mehta@acme.test",
+    "phone": "+1 555 0114",
+    "title": "DevOps Engineer",
+    "departmentId": 1,
+    "payType": "salaried",
+    "annualSalary": 104500,
+    "hourlyRate": null,
+    "hireDate": "2020-04-20",
+    "active": true,
+    "terminationDate": null,
+    "pensionOptIn": true,
+    "deductions": []
+  },
+  {
+    "id": 6,
+    "firstName": "Lucas",
+    "lastName": "Ferreira",
+    "email": "lucas.ferreira@acme.test",
+    "phone": "+1 555 0115",
+    "title": "Contract Developer",
+    "departmentId": 1,
+    "payType": "hourly",
+    "annualSalary": null,
+    "hourlyRate": 62,
+    "hireDate": "2023-02-13",
+    "active": false,
+    "terminationDate": "2026-10-16",
+    "pensionOptIn": false,
+    "deductions": []
+  },
+  {
+    "id": 7,
+    "firstName": "Grace",
+    "lastName": "Whitfield",
+    "email": "grace.whitfield@acme.test",
+    "phone": "+1 555 0116",
+    "title": "Finance Director",
+    "departmentId": 2,
+    "payType": "salaried",
+    "annualSalary": 126000,
+    "hourlyRate": null,
+    "hireDate": "2015-11-02",
+    "active": true,
+    "terminationDate": null,
+    "pensionOptIn": true,
+    "deductions": [
+      {
+        "typeId": 1,
+        "amount": 120
+      },
+      {
+        "typeId": 2,
+        "amount": 25
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "firstName": "Nathan",
+    "lastName": "Price",
+    "email": "nathan.price@acme.test",
+    "phone": "+1 555 0117",
+    "title": "Senior Accountant",
+    "departmentId": 2,
+    "payType": "salaried",
+    "annualSalary": 78000,
+    "hourlyRate": null,
+    "hireDate": "2019-07-15",
+    "active": true,
+    "terminationDate": null,
+    "pensionOptIn": true,
+    "deductions": [
+      {
+        "typeId": 1,
+        "amount": 120
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "firstName": "Hannah",
+    "lastName": "Schulz",
+    "email": "hannah.schulz@acme.test",
+    "phone": "+1 555 0118",
+    "title": "Payroll Specialist",
+    "departmentId": 2,
+    "payType": "salaried",
+    "annualSalary": 64000,
+    "hourlyRate": null,
+    "hireDate": "2021-03-08",
+    "active": true,
+    "terminationDate": null,
+    "pensionOptIn": false,
+    "deductions": [
+      {
+        "typeId": 2,
+        "amount": 25
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "firstName": "Omar",
+    "lastName": "Haddad",
+    "email": "omar.haddad@acme.test",
+    "phone": "+1 555 0119",
+    "title": "Accounts Clerk",
+    "departmentId": 2,
+    "payType": "hourly",
+    "annualSalary": null,
+    "hourlyRate": 24.75,
+    "hireDate": "2022-08-22",
+    "active": true,
+    "terminationDate": null,
+    "pensionOptIn": false,
+    "deductions": [
+      {
+        "typeId": 3,
+        "amount": 15
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "firstName": "Rachel",
+    "lastName": "Kim",
+    "email": "rachel.kim@acme.test",
+    "phone": "+1 555 0120",
+    "title": "Head of Sales",
+    "departmentId": 3,
+    "payType": "salaried",
+    "annualSalary": 115000,
+    "hourlyRate": null,
+    "hireDate": "2017-05-29",
+    "active": true,
+    "terminationDate": null,
+    "pensionOptIn": true,
+    "deductions": [
+      {
+        "typeId": 1,
+        "amount": 120
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "firstName": "Tom",
+    "lastName": "Becker",
+    "email": "tom.becker@acme.test",
+    "phone": "+1 555 0121",
+    "title": "Account Executive",
+    "departmentId": 3,
+    "payType": "salaried",
+    "annualSalary": 72000,
+    "hourlyRate": null,
+    "hireDate": "2020-10-05",
+    "active": true,
+    "terminationDate": null,
+    "pensionOptIn": false,
+    "deductions": [
+      {
+        "typeId": 1,
+        "amount": 120
+      },
+      {
+        "typeId": 4,
+        "amount": 40
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "firstName": "Isabella",
+    "lastName": "Rossi",
+    "email": "isabella.rossi@acme.test",
+    "phone": "+1 555 0122",
+    "title": "Account Executive",
+    "departmentId": 3,
+    "payType": "salaried",
+    "annualSalary": 70000,
+    "hourlyRate": null,
+    "hireDate": "2023-04-17",
+    "active": true,
+    "terminationDate": null,
+    "pensionOptIn": true,
+    "deductions": []
+  },
+  {
+    "id": 14,
+    "firstName": "Kevin",
+    "lastName": "Nguyen",
+    "email": "kevin.nguyen@acme.test",
+    "phone": "+1 555 0123",
+    "title": "Sales Development Rep",
+    "departmentId": 3,
+    "payType": "salaried",
+    "annualSalary": 52000,
+    "hourlyRate": null,
+    "hireDate": "2024-01-08",
+    "active": true,
+    "terminationDate": null,
+    "pensionOptIn": false,
+    "deductions": []
+  },
+  {
+    "id": 15,
+    "firstName": "Chloe",
+    "lastName": "Martin",
+    "email": "chloe.martin@acme.test",
+    "phone": "+1 555 0124",
+    "title": "Sales Development Rep",
+    "departmentId": 3,
+    "payType": "salaried",
+    "annualSalary": 50000,
+    "hourlyRate": null,
+    "hireDate": "2022-06-13",
+    "active": false,
+    "terminationDate": "2026-08-29",
+    "pensionOptIn": false,
+    "deductions": []
+  },
+  {
+    "id": 16,
+    "firstName": "Victor",
+    "lastName": "Alvarez",
+    "email": "victor.alvarez@acme.test",
+    "phone": "+1 555 0125",
+    "title": "Operations Manager",
+    "departmentId": 4,
+    "payType": "salaried",
+    "annualSalary": 92000,
+    "hourlyRate": null,
+    "hireDate": "2018-02-19",
+    "active": true,
+    "terminationDate": null,
+    "pensionOptIn": true,
+    "deductions": [
+      {
+        "typeId": 1,
+        "amount": 120
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "firstName": "Priya",
+    "lastName": "Raman",
+    "email": "priya.raman@acme.test",
+    "phone": "+1 555 0126",
+    "title": "Logistics Coordinator",
+    "departmentId": 4,
+    "payType": "salaried",
+    "annualSalary": 58000,
+    "hourlyRate": null,
+    "hireDate": "2021-09-27",
+    "active": true,
+    "terminationDate": null,
+    "pensionOptIn": true,
+    "deductions": [
+      {
+        "typeId": 1,
+        "amount": 120
+      },
+      {
+        "typeId": 2,
+        "amount": 25
+      }
+    ]
+  },
+  {
+    "id": 18,
+    "firstName": "Jake",
+    "lastName": "Morrison",
+    "email": "jake.morrison@acme.test",
+    "phone": "+1 555 0127",
+    "title": "Warehouse Associate",
+    "departmentId": 4,
+    "payType": "hourly",
+    "annualSalary": null,
+    "hourlyRate": 21.5,
+    "hireDate": "2022-03-14",
+    "active": true,
+    "terminationDate": null,
+    "pensionOptIn": false,
+    "deductions": [
+      {
+        "typeId": 3,
+        "amount": 15
+      }
+    ]
+  },
+  {
+    "id": 19,
+    "firstName": "Lena",
+    "lastName": "Kowalski",
+    "email": "lena.kowalski@acme.test",
+    "phone": "+1 555 0128",
+    "title": "Warehouse Associate",
+    "departmentId": 4,
+    "payType": "hourly",
+    "annualSalary": null,
+    "hourlyRate": 21.5,
+    "hireDate": "2023-07-03",
+    "active": true,
+    "terminationDate": null,
+    "pensionOptIn": false,
+    "deductions": [
+      {
+        "typeId": 3,
+        "amount": 15
+      }
+    ]
+  },
+  {
+    "id": 20,
+    "firstName": "Samuel",
+    "lastName": "Osei",
+    "email": "samuel.osei@acme.test",
+    "phone": "+1 555 0129",
+    "title": "Forklift Operator",
+    "departmentId": 4,
+    "payType": "hourly",
+    "annualSalary": null,
+    "hourlyRate": 23.25,
+    "hireDate": "2019-12-02",
+    "active": true,
+    "terminationDate": null,
+    "pensionOptIn": true,
+    "deductions": [
+      {
+        "typeId": 1,
+        "amount": 120
+      },
+      {
+        "typeId": 3,
+        "amount": 15
+      }
+    ]
+  },
+  {
+    "id": 21,
+    "firstName": "Mia",
+    "lastName": "Thompson",
+    "email": "mia.thompson@acme.test",
+    "phone": "+1 555 0130",
+    "title": "Facilities Technician",
+    "departmentId": 4,
+    "payType": "hourly",
+    "annualSalary": null,
+    "hourlyRate": 27,
+    "hireDate": "2024-05-20",
+    "active": false,
+    "terminationDate": "2026-10-30",
+    "pensionOptIn": false,
+    "deductions": []
+  },
+  {
+    "id": 22,
+    "firstName": "Laura",
+    "lastName": "Bennett",
+    "email": "admin@acme.test",
+    "phone": "+1 555 0131",
+    "title": "HR Director",
+    "departmentId": 5,
+    "payType": "salaried",
+    "annualSalary": 110000,
+    "hourlyRate": null,
+    "hireDate": "2014-08-11",
+    "active": true,
+    "terminationDate": null,
+    "pensionOptIn": true,
+    "deductions": [
+      {
+        "typeId": 1,
+        "amount": 120
+      },
+      {
+        "typeId": 2,
+        "amount": 25
+      }
+    ]
+  },
+  {
+    "id": 23,
+    "firstName": "Diego",
+    "lastName": "Santos",
+    "email": "diego.santos@acme.test",
+    "phone": "+1 555 0132",
+    "title": "HR Generalist",
+    "departmentId": 5,
+    "payType": "salaried",
+    "annualSalary": 61000,
+    "hourlyRate": null,
+    "hireDate": "2020-01-13",
+    "active": true,
+    "terminationDate": null,
+    "pensionOptIn": false,
+    "deductions": [
+      {
+        "typeId": 1,
+        "amount": 120
+      }
+    ]
+  },
+  {
+    "id": 24,
+    "firstName": "Yuki",
+    "lastName": "Tanaka",
+    "email": "yuki.tanaka@acme.test",
+    "phone": "+1 555 0133",
+    "title": "Recruiter",
+    "departmentId": 5,
+    "payType": "salaried",
+    "annualSalary": 59000,
+    "hourlyRate": null,
+    "hireDate": "2023-10-02",
+    "active": true,
+    "terminationDate": null,
+    "pensionOptIn": true,
+    "deductions": []
+  },
+  {
+    "id": 25,
+    "firstName": "Zoe",
+    "lastName": "Walsh",
+    "email": "zoe.walsh@acme.test",
+    "phone": "+1 555 0134",
+    "title": "HR Assistant",
+    "departmentId": 5,
+    "payType": "hourly",
+    "annualSalary": null,
+    "hourlyRate": 22,
+    "hireDate": "2025-02-03",
+    "active": true,
+    "terminationDate": null,
+    "pensionOptIn": false,
+    "deductions": []
+  }
+]

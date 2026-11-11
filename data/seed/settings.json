@@ -1,0 +1,23 @@
+{
+  "currency": "USD",
+  "socialRate": 0.05,
+  "pensionRate": 0.03,
+  "payDay": 28,
+  "taxBrackets": [
+    {
+      "from": 0,
+      "to": 1000,
+      "rate": 0
+    },
+    {
+      "from": 1000,
+      "to": 4000,
+      "rate": 0.15
+    },
+    {
+      "from": 4000,
+      "to": null,
+      "rate": 0.25
+    }
+  ]
+}

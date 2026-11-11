@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "name": "Health insurance",
+    "defaultAmount": 120
+  },
+  {
+    "id": 2,
+    "name": "Dental plan",
+    "defaultAmount": 25
+  },
+  {
+    "id": 3,
+    "name": "Union dues",
+    "defaultAmount": 15
+  },
+  {
+    "id": 4,
+    "name": "Parking",
+    "defaultAmount": 40
+  }
+]

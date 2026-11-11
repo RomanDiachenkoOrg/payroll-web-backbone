@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "name": "Engineering",
+    "code": "ENG",
+    "costCenter": "CC-100",
+    "managerEmployeeId": 1
+  },
+  {
+    "id": 2,
+    "name": "Finance",
+    "code": "FIN",
+    "costCenter": "CC-200",
+    "managerEmployeeId": 7
+  },
+  {
+    "id": 3,
+    "name": "Sales",
+    "code": "SAL",
+    "costCenter": "CC-300",
+    "managerEmployeeId": 11
+  },
+  {
+    "id": 4,
+    "name": "Operations",
+    "code": "OPS",
+    "costCenter": "CC-400",
+    "managerEmployeeId": 16
+  },
+  {
+    "id": 5,
+    "name": "HR",
+    "code": "HR",
+    "costCenter": "CC-500",
+    "managerEmployeeId": 22
+  }
+]

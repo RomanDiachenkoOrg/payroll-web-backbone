@@ -1,0 +1,1104 @@
+[
+  {
+    "employeeId": 1,
+    "employeeName": "Michael Reyes",
+    "departmentId": 1,
+    "payType": "salaried",
+    "rate": null,
+    "regularHours": 0,
+    "overtimeHours": 0,
+    "gross": 11000,
+    "tax": 2200,
+    "social": 550,
+    "pension": 330,
+    "other": 145,
+    "deductions": [
+      {
+        "typeId": 1,
+        "name": "Health insurance",
+        "amount": 120
+      },
+      {
+        "typeId": 2,
+        "name": "Dental plan",
+        "amount": 25
+      }
+    ],
+    "net": 7775,
+    "payRunId": 1,
+    "id": 1
+  },
+  {
+    "employeeId": 2,
+    "employeeName": "Emily Carter",
+    "departmentId": 1,
+    "payType": "hourly",
+    "rate": 38.5,
+    "regularHours": 158,
+    "overtimeHours": 13,
+    "gross": 6833.75,
+    "tax": 1158.44,
+    "social": 341.69,
+    "pension": 205.01,
+    "other": 120,
+    "deductions": [
+      {
+        "typeId": 1,
+        "name": "Health insurance",
+        "amount": 120
+      }
+    ],
+    "net": 5008.61,
+    "payRunId": 1,
+    "id": 2
+  },
+  {
+    "employeeId": 3,
+    "employeeName": "Daniel Okafor",
+    "departmentId": 1,
+    "payType": "salaried",
+    "rate": null,
+    "regularHours": 0,
+    "overtimeHours": 0,
+    "gross": 9833.33,
+    "tax": 1908.33,
+    "social": 491.67,
+    "pension": 295,
+    "other": 120,
+    "deductions": [
+      {
+        "typeId": 1,
+        "name": "Health insurance",
+        "amount": 120
+      }
+    ],
+    "net": 7018.33,
+    "payRunId": 1,
+    "id": 3
+  },
+  {
+    "employeeId": 4,
+    "employeeName": "Sofia Lindqvist",
+    "departmentId": 1,
+    "payType": "salaried",
+    "rate": null,
+    "regularHours": 0,
+    "overtimeHours": 0,
+    "gross": 8000,
+    "tax": 1450,
+    "social": 400,
+    "pension": 0,
+    "other": 160,
+    "deductions": [
+      {
+        "typeId": 1,
+        "name": "Health insurance",
+        "amount": 120
+      },
+      {
+        "typeId": 4,
+        "name": "Parking",
+        "amount": 40
+      }
+    ],
+    "net": 5990,
+    "payRunId": 1,
+    "id": 4
+  },
+  {
+    "employeeId": 5,
+    "employeeName": "Arjun Mehta",
+    "departmentId": 1,
+    "payType": "salaried",
+    "rate": null,
+    "regularHours": 0,
+    "overtimeHours": 0,
+    "gross": 8708.33,
+    "tax": 1627.08,
+    "social": 435.42,
+    "pension": 261.25,
+    "other": 0,
+    "deductions": [],
+    "net": 6384.58,
+    "payRunId": 1,
+    "id": 5
+  },
+  {
+    "employeeId": 6,
+    "employeeName": "Lucas Ferreira",
+    "departmentId": 1,
+    "payType": "hourly",
+    "rate": 62,
+    "regularHours": 158,
+    "overtimeHours": 18,
+    "gross": 11470,
+    "tax": 2317.5,
+    "social": 573.5,
+    "pension": 0,
+    "other": 0,
+    "deductions": [],
+    "net": 8579,
+    "payRunId": 1,
+    "id": 6
+  },
+  {
+    "employeeId": 7,
+    "employeeName": "Grace Whitfield",
+    "departmentId": 2,
+    "payType": "salaried",
+    "rate": null,
+    "regularHours": 0,
+    "overtimeHours": 0,
+    "gross": 10500,
+    "tax": 2075,
+    "social": 525,
+    "pension": 315,
+    "other": 145,
+    "deductions": [
+      {
+        "typeId": 1,
+        "name": "Health insurance",
+        "amount": 120
+      },
+      {
+        "typeId": 2,
+        "name": "Dental plan",
+        "amount": 25
+      }
+    ],
+    "net": 7440,
+    "payRunId": 1,
+    "id": 7
+  },
+  {
+    "employeeId": 8,
+    "employeeName": "Nathan Price",
+    "departmentId": 2,
+    "payType": "salaried",
+    "rate": null,
+    "regularHours": 0,
+    "overtimeHours": 0,
+    "gross": 6500,
+    "tax": 1075,
+    "social": 325,
+    "pension": 195,
+    "other": 120,
+    "deductions": [
+      {
+        "typeId": 1,
+        "name": "Health insurance",
+        "amount": 120
+      }
+    ],
+    "net": 4785,
+    "payRunId": 1,
+    "id": 8
+  },
+  {
+    "employeeId": 9,
+    "employeeName": "Hannah Schulz",
+    "departmentId": 2,
+    "payType": "salaried",
+    "rate": null,
+    "regularHours": 0,
+    "overtimeHours": 0,
+    "gross": 5333.33,
+    "tax": 783.33,
+    "social": 266.67,
+    "pension": 0,
+    "other": 25,
+    "deductions": [
+      {
+        "typeId": 2,
+        "name": "Dental plan",
+        "amount": 25
+      }
+    ],
+    "net": 4258.33,
+    "payRunId": 1,
+    "id": 9
+  },
+  {
+    "employeeId": 10,
+    "employeeName": "Omar Haddad",
+    "departmentId": 2,
+    "payType": "hourly",
+    "rate": 24.75,
+    "regularHours": 158,
+    "overtimeHours": 16,
+    "gross": 4504.5,
+    "tax": 576.13,
+    "social": 225.23,
+    "pension": 0,
+    "other": 15,
+    "deductions": [
+      {
+        "typeId": 3,
+        "name": "Union dues",
+        "amount": 15
+      }
+    ],
+    "net": 3688.14,
+    "payRunId": 1,
+    "id": 10
+  },
+  {
+    "employeeId": 11,
+    "employeeName": "Rachel Kim",
+    "departmentId": 3,
+    "payType": "salaried",
+    "rate": null,
+    "regularHours": 0,
+    "overtimeHours": 0,
+    "gross": 9583.33,
+    "tax": 1845.83,
+    "social": 479.17,
+    "pension": 287.5,
+    "other": 120,
+    "deductions": [
+      {
+        "typeId": 1,
+        "name": "Health insurance",
+        "amount": 120
+      }
+    ],
+    "net": 6850.83,
+    "payRunId": 1,
+    "id": 11
+  },
+  {
+    "employeeId": 12,
+    "employeeName": "Tom Becker",
+    "departmentId": 3,
+    "payType": "salaried",
+    "rate": null,
+    "regularHours": 0,
+    "overtimeHours": 0,
+    "gross": 6000,
+    "tax": 950,
+    "social": 300,
+    "pension": 0,
+    "other": 160,
+    "deductions": [
+      {
+        "typeId": 1,
+        "name": "Health insurance",
+        "amount": 120
+      },
+      {
+        "typeId": 4,
+        "name": "Parking",
+        "amount": 40
+      }
+    ],
+    "net": 4590,
+    "payRunId": 1,
+    "id": 12
+  },
+  {
+    "employeeId": 13,
+    "employeeName": "Isabella Rossi",
+    "departmentId": 3,
+    "payType": "salaried",
+    "rate": null,
+    "regularHours": 0,
+    "overtimeHours": 0,
+    "gross": 5833.33,
+    "tax": 908.33,
+    "social": 291.67,
+    "pension": 175,
+    "other": 0,
+    "deductions": [],
+    "net": 4458.33,
+    "payRunId": 1,
+    "id": 13
+  },
+  {
+    "employeeId": 14,
+    "employeeName": "Kevin Nguyen",
+    "departmentId": 3,
+    "payType": "salaried",
+    "rate": null,
+    "regularHours": 0,
+    "overtimeHours": 0,
+    "gross": 4333.33,
+    "tax": 533.33,
+    "social": 216.67,
+    "pension": 0,
+    "other": 0,
+    "deductions": [],
+    "net": 3583.33,
+    "payRunId": 1,
+    "id": 14
+  },
+  {
+    "employeeId": 16,
+    "employeeName": "Victor Alvarez",
+    "departmentId": 4,
+    "payType": "salaried",
+    "rate": null,
+    "regularHours": 0,
+    "overtimeHours": 0,
+    "gross": 7666.67,
+    "tax": 1366.67,
+    "social": 383.33,
+    "pension": 230,
+    "other": 120,
+    "deductions": [
+      {
+        "typeId": 1,
+        "name": "Health insurance",
+        "amount": 120
+      }
+    ],
+    "net": 5566.67,
+    "payRunId": 1,
+    "id": 15
+  },
+  {
+    "employeeId": 17,
+    "employeeName": "Priya Raman",
+    "departmentId": 4,
+    "payType": "salaried",
+    "rate": null,
+    "regularHours": 0,
+    "overtimeHours": 0,
+    "gross": 4833.33,
+    "tax": 658.33,
+    "social": 241.67,
+    "pension": 145,
+    "other": 145,
+    "deductions": [
+      {
+        "typeId": 1,
+        "name": "Health insurance",
+        "amount": 120
+      },
+      {
+        "typeId": 2,
+        "name": "Dental plan",
+        "amount": 25
+      }
+    ],
+    "net": 3643.33,
+    "payRunId": 1,
+    "id": 16
+  },
+  {
+    "employeeId": 18,
+    "employeeName": "Jake Morrison",
+    "departmentId": 4,
+    "payType": "hourly",
+    "rate": 21.5,
+    "regularHours": 158,
+    "overtimeHours": 7,
+    "gross": 3622.75,
+    "tax": 393.41,
+    "social": 181.14,
+    "pension": 0,
+    "other": 15,
+    "deductions": [
+      {
+        "typeId": 3,
+        "name": "Union dues",
+        "amount": 15
+      }
+    ],
+    "net": 3033.2,
+    "payRunId": 1,
+    "id": 17
+  },
+  {
+    "employeeId": 19,
+    "employeeName": "Lena Kowalski",
+    "departmentId": 4,
+    "payType": "hourly",
+    "rate": 21.5,
+    "regularHours": 160,
+    "overtimeHours": 18,
+    "gross": 4020.5,
+    "tax": 455.13,
+    "social": 201.03,
+    "pension": 0,
+    "other": 15,
+    "deductions": [
+      {
+        "typeId": 3,
+        "name": "Union dues",
+        "amount": 15
+      }
+    ],
+    "net": 3349.34,
+    "payRunId": 1,
+    "id": 18
+  },
+  {
+    "employeeId": 20,
+    "employeeName": "Samuel Osei",
+    "departmentId": 4,
+    "payType": "hourly",
+    "rate": 23.25,
+    "regularHours": 158,
+    "overtimeHours": 13,
+    "gross": 4126.88,
+    "tax": 481.72,
+    "social": 206.34,
+    "pension": 123.81,
+    "other": 135,
+    "deductions": [
+      {
+        "typeId": 1,
+        "name": "Health insurance",
+        "amount": 120
+      },
+      {
+        "typeId": 3,
+        "name": "Union dues",
+        "amount": 15
+      }
+    ],
+    "net": 3180.01,
+    "payRunId": 1,
+    "id": 19
+  },
+  {
+    "employeeId": 21,
+    "employeeName": "Mia Thompson",
+    "departmentId": 4,
+    "payType": "hourly",
+    "rate": 27,
+    "regularHours": 158,
+    "overtimeHours": 18,
+    "gross": 4995,
+    "tax": 698.75,
+    "social": 249.75,
+    "pension": 0,
+    "other": 0,
+    "deductions": [],
+    "net": 4046.5,
+    "payRunId": 1,
+    "id": 20
+  },
+  {
+    "employeeId": 22,
+    "employeeName": "Laura Bennett",
+    "departmentId": 5,
+    "payType": "salaried",
+    "rate": null,
+    "regularHours": 0,
+    "overtimeHours": 0,
+    "gross": 9166.67,
+    "tax": 1741.67,
+    "social": 458.33,
+    "pension": 275,
+    "other": 145,
+    "deductions": [
+      {
+        "typeId": 1,
+        "name": "Health insurance",
+        "amount": 120
+      },
+      {
+        "typeId": 2,
+        "name": "Dental plan",
+        "amount": 25
+      }
+    ],
+    "net": 6546.67,
+    "payRunId": 1,
+    "id": 21
+  },
+  {
+    "employeeId": 23,
+    "employeeName": "Diego Santos",
+    "departmentId": 5,
+    "payType": "salaried",
+    "rate": null,
+    "regularHours": 0,
+    "overtimeHours": 0,
+    "gross": 5083.33,
+    "tax": 720.83,
+    "social": 254.17,
+    "pension": 0,
+    "other": 120,
+    "deductions": [
+      {
+        "typeId": 1,
+        "name": "Health insurance",
+        "amount": 120
+      }
+    ],
+    "net": 3988.33,
+    "payRunId": 1,
+    "id": 22
+  },
+  {
+    "employeeId": 24,
+    "employeeName": "Yuki Tanaka",
+    "departmentId": 5,
+    "payType": "salaried",
+    "rate": null,
+    "regularHours": 0,
+    "overtimeHours": 0,
+    "gross": 4916.67,
+    "tax": 679.17,
+    "social": 245.83,
+    "pension": 147.5,
+    "other": 0,
+    "deductions": [],
+    "net": 3844.17,
+    "payRunId": 1,
+    "id": 23
+  },
+  {
+    "employeeId": 25,
+    "employeeName": "Zoe Walsh",
+    "departmentId": 5,
+    "payType": "hourly",
+    "rate": 22,
+    "regularHours": 158,
+    "overtimeHours": 16,
+    "gross": 4004,
+    "tax": 451,
+    "social": 200.2,
+    "pension": 0,
+    "other": 0,
+    "deductions": [],
+    "net": 3352.8,
+    "payRunId": 1,
+    "id": 24
+  },
+  {
+    "employeeId": 1,
+    "employeeName": "Michael Reyes",
+    "departmentId": 1,
+    "payType": "salaried",
+    "rate": null,
+    "regularHours": 0,
+    "overtimeHours": 0,
+    "gross": 11000,
+    "tax": 2200,
+    "social": 550,
+    "pension": 330,
+    "other": 145,
+    "deductions": [
+      {
+        "typeId": 1,
+        "name": "Health insurance",
+        "amount": 120
+      },
+      {
+        "typeId": 2,
+        "name": "Dental plan",
+        "amount": 25
+      }
+    ],
+    "net": 7775,
+    "payRunId": 2,
+    "id": 25
+  },
+  {
+    "employeeId": 2,
+    "employeeName": "Emily Carter",
+    "departmentId": 1,
+    "payType": "hourly",
+    "rate": 38.5,
+    "regularHours": 160,
+    "overtimeHours": 18,
+    "gross": 7199.5,
+    "tax": 1249.88,
+    "social": 359.98,
+    "pension": 215.99,
+    "other": 120,
+    "deductions": [
+      {
+        "typeId": 1,
+        "name": "Health insurance",
+        "amount": 120
+      }
+    ],
+    "net": 5253.65,
+    "payRunId": 2,
+    "id": 26
+  },
+  {
+    "employeeId": 3,
+    "employeeName": "Daniel Okafor",
+    "departmentId": 1,
+    "payType": "salaried",
+    "rate": null,
+    "regularHours": 0,
+    "overtimeHours": 0,
+    "gross": 9833.33,
+    "tax": 1908.33,
+    "social": 491.67,
+    "pension": 295,
+    "other": 120,
+    "deductions": [
+      {
+        "typeId": 1,
+        "name": "Health insurance",
+        "amount": 120
+      }
+    ],
+    "net": 7018.33,
+    "payRunId": 2,
+    "id": 27
+  },
+  {
+    "employeeId": 4,
+    "employeeName": "Sofia Lindqvist",
+    "departmentId": 1,
+    "payType": "salaried",
+    "rate": null,
+    "regularHours": 0,
+    "overtimeHours": 0,
+    "gross": 8000,
+    "tax": 1450,
+    "social": 400,
+    "pension": 0,
+    "other": 160,
+    "deductions": [
+      {
+        "typeId": 1,
+        "name": "Health insurance",
+        "amount": 120
+      },
+      {
+        "typeId": 4,
+        "name": "Parking",
+        "amount": 40
+      }
+    ],
+    "net": 5990,
+    "payRunId": 2,
+    "id": 28
+  },
+  {
+    "employeeId": 5,
+    "employeeName": "Arjun Mehta",
+    "departmentId": 1,
+    "payType": "salaried",
+    "rate": null,
+    "regularHours": 0,
+    "overtimeHours": 0,
+    "gross": 8708.33,
+    "tax": 1627.08,
+    "social": 435.42,
+    "pension": 261.25,
+    "other": 0,
+    "deductions": [],
+    "net": 6384.58,
+    "payRunId": 2,
+    "id": 29
+  },
+  {
+    "employeeId": 7,
+    "employeeName": "Grace Whitfield",
+    "departmentId": 2,
+    "payType": "salaried",
+    "rate": null,
+    "regularHours": 0,
+    "overtimeHours": 0,
+    "gross": 10500,
+    "tax": 2075,
+    "social": 525,
+    "pension": 315,
+    "other": 145,
+    "deductions": [
+      {
+        "typeId": 1,
+        "name": "Health insurance",
+        "amount": 120
+      },
+      {
+        "typeId": 2,
+        "name": "Dental plan",
+        "amount": 25
+      }
+    ],
+    "net": 7440,
+    "payRunId": 2,
+    "id": 30
+  },
+  {
+    "employeeId": 8,
+    "employeeName": "Nathan Price",
+    "departmentId": 2,
+    "payType": "salaried",
+    "rate": null,
+    "regularHours": 0,
+    "overtimeHours": 0,
+    "gross": 6500,
+    "tax": 1075,
+    "social": 325,
+    "pension": 195,
+    "other": 120,
+    "deductions": [
+      {
+        "typeId": 1,
+        "name": "Health insurance",
+        "amount": 120
+      }
+    ],
+    "net": 4785,
+    "payRunId": 2,
+    "id": 31
+  },
+  {
+    "employeeId": 9,
+    "employeeName": "Hannah Schulz",
+    "departmentId": 2,
+    "payType": "salaried",
+    "rate": null,
+    "regularHours": 0,
+    "overtimeHours": 0,
+    "gross": 5333.33,
+    "tax": 783.33,
+    "social": 266.67,
+    "pension": 0,
+    "other": 25,
+    "deductions": [
+      {
+        "typeId": 2,
+        "name": "Dental plan",
+        "amount": 25
+      }
+    ],
+    "net": 4258.33,
+    "payRunId": 2,
+    "id": 32
+  },
+  {
+    "employeeId": 10,
+    "employeeName": "Omar Haddad",
+    "departmentId": 2,
+    "payType": "hourly",
+    "rate": 24.75,
+    "regularHours": 158,
+    "overtimeHours": 18,
+    "gross": 4578.75,
+    "tax": 594.69,
+    "social": 228.94,
+    "pension": 0,
+    "other": 15,
+    "deductions": [
+      {
+        "typeId": 3,
+        "name": "Union dues",
+        "amount": 15
+      }
+    ],
+    "net": 3740.12,
+    "payRunId": 2,
+    "id": 33
+  },
+  {
+    "employeeId": 11,
+    "employeeName": "Rachel Kim",
+    "departmentId": 3,
+    "payType": "salaried",
+    "rate": null,
+    "regularHours": 0,
+    "overtimeHours": 0,
+    "gross": 9583.33,
+    "tax": 1845.83,
+    "social": 479.17,
+    "pension": 287.5,
+    "other": 120,
+    "deductions": [
+      {
+        "typeId": 1,
+        "name": "Health insurance",
+        "amount": 120
+      }
+    ],
+    "net": 6850.83,
+    "payRunId": 2,
+    "id": 34
+  },
+  {
+    "employeeId": 12,
+    "employeeName": "Tom Becker",
+    "departmentId": 3,
+    "payType": "salaried",
+    "rate": null,
+    "regularHours": 0,
+    "overtimeHours": 0,
+    "gross": 6000,
+    "tax": 950,
+    "social": 300,
+    "pension": 0,
+    "other": 160,
+    "deductions": [
+      {
+        "typeId": 1,
+        "name": "Health insurance",
+        "amount": 120
+      },
+      {
+        "typeId": 4,
+        "name": "Parking",
+        "amount": 40
+      }
+    ],
+    "net": 4590,
+    "payRunId": 2,
+    "id": 35
+  },
+  {
+    "employeeId": 13,
+    "employeeName": "Isabella Rossi",
+    "departmentId": 3,
+    "payType": "salaried",
+    "rate": null,
+    "regularHours": 0,
+    "overtimeHours": 0,
+    "gross": 5833.33,
+    "tax": 908.33,
+    "social": 291.67,
+    "pension": 175,
+    "other": 0,
+    "deductions": [],
+    "net": 4458.33,
+    "payRunId": 2,
+    "id": 36
+  },
+  {
+    "employeeId": 14,
+    "employeeName": "Kevin Nguyen",
+    "departmentId": 3,
+    "payType": "salaried",
+    "rate": null,
+    "regularHours": 0,
+    "overtimeHours": 0,
+    "gross": 4333.33,
+    "tax": 533.33,
+    "social": 216.67,
+    "pension": 0,
+    "other": 0,
+    "deductions": [],
+    "net": 3583.33,
+    "payRunId": 2,
+    "id": 37
+  },
+  {
+    "employeeId": 16,
+    "employeeName": "Victor Alvarez",
+    "departmentId": 4,
+    "payType": "salaried",
+    "rate": null,
+    "regularHours": 0,
+    "overtimeHours": 0,
+    "gross": 7666.67,
+    "tax": 1366.67,
+    "social": 383.33,
+    "pension": 230,
+    "other": 120,
+    "deductions": [
+      {
+        "typeId": 1,
+        "name": "Health insurance",
+        "amount": 120
+      }
+    ],
+    "net": 5566.67,
+    "payRunId": 2,
+    "id": 38
+  },
+  {
+    "employeeId": 17,
+    "employeeName": "Priya Raman",
+    "departmentId": 4,
+    "payType": "salaried",
+    "rate": null,
+    "regularHours": 0,
+    "overtimeHours": 0,
+    "gross": 4833.33,
+    "tax": 658.33,
+    "social": 241.67,
+    "pension": 145,
+    "other": 145,
+    "deductions": [
+      {
+        "typeId": 1,
+        "name": "Health insurance",
+        "amount": 120
+      },
+      {
+        "typeId": 2,
+        "name": "Dental plan",
+        "amount": 25
+      }
+    ],
+    "net": 3643.33,
+    "payRunId": 2,
+    "id": 39
+  },
+  {
+    "employeeId": 18,
+    "employeeName": "Jake Morrison",
+    "departmentId": 4,
+    "payType": "hourly",
+    "rate": 21.5,
+    "regularHours": 118,
+    "overtimeHours": 16,
+    "gross": 3053,
+    "tax": 307.95,
+    "social": 152.65,
+    "pension": 0,
+    "other": 15,
+    "deductions": [
+      {
+        "typeId": 3,
+        "name": "Union dues",
+        "amount": 15
+      }
+    ],
+    "net": 2577.4,
+    "payRunId": 2,
+    "id": 40
+  },
+  {
+    "employeeId": 19,
+    "employeeName": "Lena Kowalski",
+    "departmentId": 4,
+    "payType": "hourly",
+    "rate": 21.5,
+    "regularHours": 158,
+    "overtimeHours": 7,
+    "gross": 3622.75,
+    "tax": 393.41,
+    "social": 181.14,
+    "pension": 0,
+    "other": 15,
+    "deductions": [
+      {
+        "typeId": 3,
+        "name": "Union dues",
+        "amount": 15
+      }
+    ],
+    "net": 3033.2,
+    "payRunId": 2,
+    "id": 41
+  },
+  {
+    "employeeId": 20,
+    "employeeName": "Samuel Osei",
+    "departmentId": 4,
+    "payType": "hourly",
+    "rate": 23.25,
+    "regularHours": 160,
+    "overtimeHours": 18,
+    "gross": 4347.75,
+    "tax": 536.94,
+    "social": 217.39,
+    "pension": 130.43,
+    "other": 135,
+    "deductions": [
+      {
+        "typeId": 1,
+        "name": "Health insurance",
+        "amount": 120
+      },
+      {
+        "typeId": 3,
+        "name": "Union dues",
+        "amount": 15
+      }
+    ],
+    "net": 3327.99,
+    "payRunId": 2,
+    "id": 42
+  },
+  {
+    "employeeId": 22,
+    "employeeName": "Laura Bennett",
+    "departmentId": 5,
+    "payType": "salaried",
+    "rate": null,
+    "regularHours": 0,
+    "overtimeHours": 0,
+    "gross": 9166.67,
+    "tax": 1741.67,
+    "social": 458.33,
+    "pension": 275,
+    "other": 145,
+    "deductions": [
+      {
+        "typeId": 1,
+        "name": "Health insurance",
+        "amount": 120
+      },
+      {
+        "typeId": 2,
+        "name": "Dental plan",
+        "amount": 25
+      }
+    ],
+    "net": 6546.67,
+    "payRunId": 2,
+    "id": 43
+  },
+  {
+    "employeeId": 23,
+    "employeeName": "Diego Santos",
+    "departmentId": 5,
+    "payType": "salaried",
+    "rate": null,
+    "regularHours": 0,
+    "overtimeHours": 0,
+    "gross": 5083.33,
+    "tax": 720.83,
+    "social": 254.17,
+    "pension": 0,
+    "other": 120,
+    "deductions": [
+      {
+        "typeId": 1,
+        "name": "Health insurance",
+        "amount": 120
+      }
+    ],
+    "net": 3988.33,
+    "payRunId": 2,
+    "id": 44
+  },
+  {
+    "employeeId": 24,
+    "employeeName": "Yuki Tanaka",
+    "departmentId": 5,
+    "payType": "salaried",
+    "rate": null,
+    "regularHours": 0,
+    "overtimeHours": 0,
+    "gross": 4916.67,
+    "tax": 679.17,
+    "social": 245.83,
+    "pension": 147.5,
+    "other": 0,
+    "deductions": [],
+    "net": 3844.17,
+    "payRunId": 2,
+    "id": 45
+  },
+  {
+    "employeeId": 25,
+    "employeeName": "Zoe Walsh",
+    "departmentId": 5,
+    "payType": "hourly",
+    "rate": 22,
+    "regularHours": 158,
+    "overtimeHours": 18,
+    "gross": 4070,
+    "tax": 467.5,
+    "social": 203.5,
+    "pension": 0,
+    "other": 0,
+    "deductions": [],
+    "net": 3399,
+    "payRunId": 2,
+    "id": 46
+  }
+]

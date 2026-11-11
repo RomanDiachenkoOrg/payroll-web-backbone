@@ -1,0 +1,626 @@
+[
+  {
+    "employeeId": 1,
+    "effectiveDate": "2016-03-14",
+    "payType": "salaried",
+    "amount": 117300,
+    "reason": "Initial salary",
+    "id": 1
+  },
+  {
+    "employeeId": 1,
+    "effectiveDate": "2022-01-01",
+    "payType": "salaried",
+    "amount": 122000,
+    "reason": "Annual review",
+    "id": 2
+  },
+  {
+    "employeeId": 1,
+    "effectiveDate": "2024-01-01",
+    "payType": "salaried",
+    "amount": 126900,
+    "reason": "Annual review",
+    "id": 3
+  },
+  {
+    "employeeId": 1,
+    "effectiveDate": "2026-01-01",
+    "payType": "salaried",
+    "amount": 132000,
+    "reason": "Annual review",
+    "id": 4
+  },
+  {
+    "employeeId": 2,
+    "effectiveDate": "2021-06-01",
+    "payType": "hourly",
+    "amount": 35.6,
+    "reason": "Initial salary",
+    "id": 5
+  },
+  {
+    "employeeId": 2,
+    "effectiveDate": "2024-01-01",
+    "payType": "hourly",
+    "amount": 37.02,
+    "reason": "Annual review",
+    "id": 6
+  },
+  {
+    "employeeId": 2,
+    "effectiveDate": "2026-01-01",
+    "payType": "hourly",
+    "amount": 38.5,
+    "reason": "Annual review",
+    "id": 7
+  },
+  {
+    "employeeId": 3,
+    "effectiveDate": "2018-09-03",
+    "payType": "salaried",
+    "amount": 104900,
+    "reason": "Initial salary",
+    "id": 8
+  },
+  {
+    "employeeId": 3,
+    "effectiveDate": "2022-01-01",
+    "payType": "salaried",
+    "amount": 109100,
+    "reason": "Annual review",
+    "id": 9
+  },
+  {
+    "employeeId": 3,
+    "effectiveDate": "2024-01-01",
+    "payType": "salaried",
+    "amount": 113500,
+    "reason": "Annual review",
+    "id": 10
+  },
+  {
+    "employeeId": 3,
+    "effectiveDate": "2026-01-01",
+    "payType": "salaried",
+    "amount": 118000,
+    "reason": "Annual review",
+    "id": 11
+  },
+  {
+    "employeeId": 4,
+    "effectiveDate": "2022-01-10",
+    "payType": "salaried",
+    "amount": 88800,
+    "reason": "Initial salary",
+    "id": 12
+  },
+  {
+    "employeeId": 4,
+    "effectiveDate": "2024-01-01",
+    "payType": "salaried",
+    "amount": 92300,
+    "reason": "Annual review",
+    "id": 13
+  },
+  {
+    "employeeId": 4,
+    "effectiveDate": "2026-01-01",
+    "payType": "salaried",
+    "amount": 96000,
+    "reason": "Annual review",
+    "id": 14
+  },
+  {
+    "employeeId": 5,
+    "effectiveDate": "2020-04-20",
+    "payType": "salaried",
+    "amount": 92900,
+    "reason": "Initial salary",
+    "id": 15
+  },
+  {
+    "employeeId": 5,
+    "effectiveDate": "2022-01-01",
+    "payType": "salaried",
+    "amount": 96600,
+    "reason": "Annual review",
+    "id": 16
+  },
+  {
+    "employeeId": 5,
+    "effectiveDate": "2024-01-01",
+    "payType": "salaried",
+    "amount": 100500,
+    "reason": "Annual review",
+    "id": 17
+  },
+  {
+    "employeeId": 5,
+    "effectiveDate": "2026-01-01",
+    "payType": "salaried",
+    "amount": 104500,
+    "reason": "Annual review",
+    "id": 18
+  },
+  {
+    "employeeId": 6,
+    "effectiveDate": "2023-02-13",
+    "payType": "hourly",
+    "amount": 59.62,
+    "reason": "Initial salary",
+    "id": 19
+  },
+  {
+    "employeeId": 6,
+    "effectiveDate": "2026-01-01",
+    "payType": "hourly",
+    "amount": 62,
+    "reason": "Annual review",
+    "id": 20
+  },
+  {
+    "employeeId": 7,
+    "effectiveDate": "2015-11-02",
+    "payType": "salaried",
+    "amount": 112000,
+    "reason": "Initial salary",
+    "id": 21
+  },
+  {
+    "employeeId": 7,
+    "effectiveDate": "2022-01-01",
+    "payType": "salaried",
+    "amount": 116500,
+    "reason": "Annual review",
+    "id": 22
+  },
+  {
+    "employeeId": 7,
+    "effectiveDate": "2024-01-01",
+    "payType": "salaried",
+    "amount": 121200,
+    "reason": "Annual review",
+    "id": 23
+  },
+  {
+    "employeeId": 7,
+    "effectiveDate": "2026-01-01",
+    "payType": "salaried",
+    "amount": 126000,
+    "reason": "Annual review",
+    "id": 24
+  },
+  {
+    "employeeId": 8,
+    "effectiveDate": "2019-07-15",
+    "payType": "salaried",
+    "amount": 69300,
+    "reason": "Initial salary",
+    "id": 25
+  },
+  {
+    "employeeId": 8,
+    "effectiveDate": "2022-01-01",
+    "payType": "salaried",
+    "amount": 72100,
+    "reason": "Annual review",
+    "id": 26
+  },
+  {
+    "employeeId": 8,
+    "effectiveDate": "2024-01-01",
+    "payType": "salaried",
+    "amount": 75000,
+    "reason": "Annual review",
+    "id": 27
+  },
+  {
+    "employeeId": 8,
+    "effectiveDate": "2026-01-01",
+    "payType": "salaried",
+    "amount": 78000,
+    "reason": "Annual review",
+    "id": 28
+  },
+  {
+    "employeeId": 9,
+    "effectiveDate": "2021-03-08",
+    "payType": "salaried",
+    "amount": 59100,
+    "reason": "Initial salary",
+    "id": 29
+  },
+  {
+    "employeeId": 9,
+    "effectiveDate": "2024-01-01",
+    "payType": "salaried",
+    "amount": 61500,
+    "reason": "Annual review",
+    "id": 30
+  },
+  {
+    "employeeId": 9,
+    "effectiveDate": "2026-01-01",
+    "payType": "salaried",
+    "amount": 64000,
+    "reason": "Annual review",
+    "id": 31
+  },
+  {
+    "employeeId": 10,
+    "effectiveDate": "2022-08-22",
+    "payType": "hourly",
+    "amount": 22.88,
+    "reason": "Initial salary",
+    "id": 32
+  },
+  {
+    "employeeId": 10,
+    "effectiveDate": "2024-01-01",
+    "payType": "hourly",
+    "amount": 23.8,
+    "reason": "Annual review",
+    "id": 33
+  },
+  {
+    "employeeId": 10,
+    "effectiveDate": "2026-01-01",
+    "payType": "hourly",
+    "amount": 24.75,
+    "reason": "Annual review",
+    "id": 34
+  },
+  {
+    "employeeId": 11,
+    "effectiveDate": "2017-05-29",
+    "payType": "salaried",
+    "amount": 102200,
+    "reason": "Initial salary",
+    "id": 35
+  },
+  {
+    "employeeId": 11,
+    "effectiveDate": "2022-01-01",
+    "payType": "salaried",
+    "amount": 106300,
+    "reason": "Annual review",
+    "id": 36
+  },
+  {
+    "employeeId": 11,
+    "effectiveDate": "2024-01-01",
+    "payType": "salaried",
+    "amount": 110600,
+    "reason": "Annual review",
+    "id": 37
+  },
+  {
+    "employeeId": 11,
+    "effectiveDate": "2026-01-01",
+    "payType": "salaried",
+    "amount": 115000,
+    "reason": "Annual review",
+    "id": 38
+  },
+  {
+    "employeeId": 12,
+    "effectiveDate": "2020-10-05",
+    "payType": "salaried",
+    "amount": 63900,
+    "reason": "Initial salary",
+    "id": 39
+  },
+  {
+    "employeeId": 12,
+    "effectiveDate": "2022-01-01",
+    "payType": "salaried",
+    "amount": 66500,
+    "reason": "Annual review",
+    "id": 40
+  },
+  {
+    "employeeId": 12,
+    "effectiveDate": "2024-01-01",
+    "payType": "salaried",
+    "amount": 69200,
+    "reason": "Annual review",
+    "id": 41
+  },
+  {
+    "employeeId": 12,
+    "effectiveDate": "2026-01-01",
+    "payType": "salaried",
+    "amount": 72000,
+    "reason": "Annual review",
+    "id": 42
+  },
+  {
+    "employeeId": 13,
+    "effectiveDate": "2023-04-17",
+    "payType": "salaried",
+    "amount": 67300,
+    "reason": "Initial salary",
+    "id": 43
+  },
+  {
+    "employeeId": 13,
+    "effectiveDate": "2026-01-01",
+    "payType": "salaried",
+    "amount": 70000,
+    "reason": "Annual review",
+    "id": 44
+  },
+  {
+    "employeeId": 14,
+    "effectiveDate": "2024-01-08",
+    "payType": "salaried",
+    "amount": 50000,
+    "reason": "Initial salary",
+    "id": 45
+  },
+  {
+    "employeeId": 14,
+    "effectiveDate": "2026-01-01",
+    "payType": "salaried",
+    "amount": 52000,
+    "reason": "Annual review",
+    "id": 46
+  },
+  {
+    "employeeId": 15,
+    "effectiveDate": "2022-06-13",
+    "payType": "salaried",
+    "amount": 46300,
+    "reason": "Initial salary",
+    "id": 47
+  },
+  {
+    "employeeId": 15,
+    "effectiveDate": "2024-01-01",
+    "payType": "salaried",
+    "amount": 48100,
+    "reason": "Annual review",
+    "id": 48
+  },
+  {
+    "employeeId": 15,
+    "effectiveDate": "2026-01-01",
+    "payType": "salaried",
+    "amount": 50000,
+    "reason": "Annual review",
+    "id": 49
+  },
+  {
+    "employeeId": 16,
+    "effectiveDate": "2018-02-19",
+    "payType": "salaried",
+    "amount": 81800,
+    "reason": "Initial salary",
+    "id": 50
+  },
+  {
+    "employeeId": 16,
+    "effectiveDate": "2022-01-01",
+    "payType": "salaried",
+    "amount": 85100,
+    "reason": "Annual review",
+    "id": 51
+  },
+  {
+    "employeeId": 16,
+    "effectiveDate": "2024-01-01",
+    "payType": "salaried",
+    "amount": 88500,
+    "reason": "Annual review",
+    "id": 52
+  },
+  {
+    "employeeId": 16,
+    "effectiveDate": "2026-01-01",
+    "payType": "salaried",
+    "amount": 92000,
+    "reason": "Annual review",
+    "id": 53
+  },
+  {
+    "employeeId": 17,
+    "effectiveDate": "2021-09-27",
+    "payType": "salaried",
+    "amount": 53700,
+    "reason": "Initial salary",
+    "id": 54
+  },
+  {
+    "employeeId": 17,
+    "effectiveDate": "2024-01-01",
+    "payType": "salaried",
+    "amount": 55800,
+    "reason": "Annual review",
+    "id": 55
+  },
+  {
+    "employeeId": 17,
+    "effectiveDate": "2026-01-01",
+    "payType": "salaried",
+    "amount": 58000,
+    "reason": "Annual review",
+    "id": 56
+  },
+  {
+    "employeeId": 18,
+    "effectiveDate": "2022-03-14",
+    "payType": "hourly",
+    "amount": 19.88,
+    "reason": "Initial salary",
+    "id": 57
+  },
+  {
+    "employeeId": 18,
+    "effectiveDate": "2024-01-01",
+    "payType": "hourly",
+    "amount": 20.67,
+    "reason": "Annual review",
+    "id": 58
+  },
+  {
+    "employeeId": 18,
+    "effectiveDate": "2026-01-01",
+    "payType": "hourly",
+    "amount": 21.5,
+    "reason": "Annual review",
+    "id": 59
+  },
+  {
+    "employeeId": 19,
+    "effectiveDate": "2023-07-03",
+    "payType": "hourly",
+    "amount": 20.67,
+    "reason": "Initial salary",
+    "id": 60
+  },
+  {
+    "employeeId": 19,
+    "effectiveDate": "2026-01-01",
+    "payType": "hourly",
+    "amount": 21.5,
+    "reason": "Annual review",
+    "id": 61
+  },
+  {
+    "employeeId": 20,
+    "effectiveDate": "2019-12-02",
+    "payType": "hourly",
+    "amount": 20.67,
+    "reason": "Initial salary",
+    "id": 62
+  },
+  {
+    "employeeId": 20,
+    "effectiveDate": "2022-01-01",
+    "payType": "hourly",
+    "amount": 21.5,
+    "reason": "Annual review",
+    "id": 63
+  },
+  {
+    "employeeId": 20,
+    "effectiveDate": "2024-01-01",
+    "payType": "hourly",
+    "amount": 22.36,
+    "reason": "Annual review",
+    "id": 64
+  },
+  {
+    "employeeId": 20,
+    "effectiveDate": "2026-01-01",
+    "payType": "hourly",
+    "amount": 23.25,
+    "reason": "Annual review",
+    "id": 65
+  },
+  {
+    "employeeId": 21,
+    "effectiveDate": "2024-05-20",
+    "payType": "hourly",
+    "amount": 25.96,
+    "reason": "Initial salary",
+    "id": 66
+  },
+  {
+    "employeeId": 21,
+    "effectiveDate": "2026-01-01",
+    "payType": "hourly",
+    "amount": 27,
+    "reason": "Annual review",
+    "id": 67
+  },
+  {
+    "employeeId": 22,
+    "effectiveDate": "2014-08-11",
+    "payType": "salaried",
+    "amount": 97800,
+    "reason": "Initial salary",
+    "id": 68
+  },
+  {
+    "employeeId": 22,
+    "effectiveDate": "2022-01-01",
+    "payType": "salaried",
+    "amount": 101700,
+    "reason": "Annual review",
+    "id": 69
+  },
+  {
+    "employeeId": 22,
+    "effectiveDate": "2024-01-01",
+    "payType": "salaried",
+    "amount": 105800,
+    "reason": "Annual review",
+    "id": 70
+  },
+  {
+    "employeeId": 22,
+    "effectiveDate": "2026-01-01",
+    "payType": "salaried",
+    "amount": 110000,
+    "reason": "Annual review",
+    "id": 71
+  },
+  {
+    "employeeId": 23,
+    "effectiveDate": "2020-01-13",
+    "payType": "salaried",
+    "amount": 54200,
+    "reason": "Initial salary",
+    "id": 72
+  },
+  {
+    "employeeId": 23,
+    "effectiveDate": "2022-01-01",
+    "payType": "salaried",
+    "amount": 56400,
+    "reason": "Annual review",
+    "id": 73
+  },
+  {
+    "employeeId": 23,
+    "effectiveDate": "2024-01-01",
+    "payType": "salaried",
+    "amount": 58700,
+    "reason": "Annual review",
+    "id": 74
+  },
+  {
+    "employeeId": 23,
+    "effectiveDate": "2026-01-01",
+    "payType": "salaried",
+    "amount": 61000,
+    "reason": "Annual review",
+    "id": 75
+  },
+  {
+    "employeeId": 24,
+    "effectiveDate": "2023-10-02",
+    "payType": "salaried",
+    "amount": 56700,
+    "reason": "Initial salary",
+    "id": 76
+  },
+  {
+    "employeeId": 24,
+    "effectiveDate": "2026-01-01",
+    "payType": "salaried",
+    "amount": 59000,
+    "reason": "Annual review",
+    "id": 77
+  },
+  {
+    "employeeId": 25,
+    "effectiveDate": "2025-02-03",
+    "payType": "hourly",
+    "amount": 22,
+    "reason": "Initial salary",
+    "id": 78
+  }
+]

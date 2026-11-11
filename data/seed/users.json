@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "email": "admin@acme.test",
+    "name": "Laura Bennett",
+    "role": "admin",
+    "departmentId": 5,
+    "employeeId": 22,
+    "salt": "1abbc63f571de887",
+    "passwordHash": "11c4ff02fafbc094d1b5dcb33ef2b3235378985c1e3c74cee08b68caffd7d2a2",
+    "active": true,
+    "lastLoginAt": null
+  },
+  {
+    "id": 2,
+    "email": "manager@acme.test",
+    "name": "Michael Reyes",
+    "role": "manager",
+    "departmentId": 1,
+    "employeeId": 1,
+    "salt": "b7f211119d9b66d9",
+    "passwordHash": "0a4d654b3c0afb6562d81b1685a6847bf06c92e462a0e0cfbf60dcaccd759f86",
+    "active": true,
+    "lastLoginAt": null
+  },
+  {
+    "id": 3,
+    "email": "employee@acme.test",
+    "name": "Emily Carter",
+    "role": "employee",
+    "departmentId": 1,
+    "employeeId": 2,
+    "salt": "32e88dcd6592bc0f",
+    "passwordHash": "211521efe6f5716c15dc182f515adbdba067a91acdaf6cad6f5081341b0e6a24",
+    "active": true,
+    "lastLoginAt": null
+  },
+  {
+    "id": 4,
+    "email": "grace.whitfield@acme.test",
+    "name": "Grace Whitfield",
+    "role": "manager",
+    "departmentId": 2,
+    "employeeId": 7,
+    "salt": "8aeb5fea3653b255",
+    "passwordHash": "5a1b91861c30e52a8a744230ebe194d1a132b4b4ccbe412d657234c2bf4d11b6",
+    "active": true,
+    "lastLoginAt": null
+  },
+  {
+    "id": 5,
+    "email": "lucas.ferreira@acme.test",
+    "name": "Lucas Ferreira",
+    "role": "employee",
+    "departmentId": 1,
+    "employeeId": 6,
+    "active": false,
+    "salt": "89e0888156d59416",
+    "passwordHash": "1c18e93c89fe9fceef26beed0adebe563beab1f74d2f117f5f50ecbebad99061",
+    "lastLoginAt": null
+  }
+]
