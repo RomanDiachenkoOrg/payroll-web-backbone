@@ -1,0 +1,28 @@
+/* print layout - used for payslips and reports */
+body {
+  padding: 0;
+  background: #fff;
+}
+
+#nav,
+#flash,
+.app-footer,
+.page-header .btn-toolbar,
+.no-print,
+.btn {
+  display: none !important;
+}
+
+.payslip {
+  border: none;
+  padding: 0;
+}
+
+a[href]:after {
+  content: "" !important;
+}
+
+.table td,
+.table th {
+  padding: 4px 6px !important;
+}

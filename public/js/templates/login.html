@@ -1,0 +1,25 @@
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h1>Sign in to Acme Payroll</h1>
+  </div>
+  <div class="panel-body">
+    <div class="alert alert-danger login-error hidden" role="alert"></div>
+    <form id="login-form" novalidate>
+      <div class="form-group">
+        <label for="login-email">Email</label>
+        <input type="email" class="form-control" id="login-email" name="email" autocomplete="username" placeholder="you@acme.test">
+      </div>
+      <div class="form-group">
+        <label for="login-password">Password</label>
+        <input type="password" class="form-control" id="login-password" name="password" autocomplete="current-password">
+      </div>
+      <button type="submit" class="btn btn-primary btn-block">Sign in</button>
+    </form>
+  </div>
+  <div class="panel-footer demo-accounts text-muted">
+    Demo accounts (password <code>Passw0rd!</code>):
+    <a href="#" data-email="admin@acme.test">admin</a> &middot;
+    <a href="#" data-email="manager@acme.test">manager</a> &middot;
+    <a href="#" data-email="employee@acme.test">employee</a>
+  </div>
+</div>

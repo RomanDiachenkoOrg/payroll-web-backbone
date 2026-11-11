@@ -1,0 +1,194 @@
+/* Acme Payroll - application styles (on top of Bootstrap 3) */
+
+body {
+  padding-top: 70px;
+  padding-bottom: 60px;
+  background: #f5f6f8;
+}
+
+#page {
+  min-height: 500px;
+}
+
+.navbar-brand .glyphicon {
+  margin-right: 6px;
+  color: #5bc0de;
+}
+
+.navbar .user-menu .role {
+  font-size: 11px;
+  text-transform: uppercase;
+  margin-left: 4px;
+}
+
+.app-loading {
+  padding: 60px 0;
+  text-align: center;
+  font-size: 16px;
+}
+
+.page-header {
+  margin-top: 10px;
+  border-bottom-color: #dde1e6;
+}
+
+.page-header .btn-toolbar {
+  margin-top: 4px;
+}
+
+.panel-body .table {
+  margin-bottom: 0;
+}
+
+.table > tbody > tr.inactive > td {
+  color: #999;
+}
+
+.table th.sortable {
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.table th.sortable:hover {
+  text-decoration: underline;
+}
+
+.table td.num,
+.table th.num {
+  text-align: right;
+  white-space: nowrap;
+}
+
+.table tfoot td {
+  font-weight: bold;
+  border-top: 2px solid #ccc;
+}
+
+.filters {
+  margin-bottom: 12px;
+}
+
+.filters .form-group {
+  margin-right: 8px;
+}
+
+/* login */
+.login-box {
+  max-width: 380px;
+  margin: 40px auto;
+}
+
+.login-box .panel-heading h1 {
+  font-size: 20px;
+  margin: 0;
+}
+
+.demo-accounts {
+  font-size: 12px;
+}
+
+/* dashboard */
+.stat {
+  background: #fff;
+  border: 1px solid #dde1e6;
+  border-radius: 4px;
+  padding: 15px;
+  margin-bottom: 20px;
+}
+
+.stat .stat-label {
+  color: #777;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.stat .stat-value {
+  font-size: 26px;
+  font-weight: 300;
+}
+
+.bar-chart .bar-row {
+  margin-bottom: 8px;
+}
+
+.bar-chart .bar-label {
+  width: 110px;
+  display: inline-block;
+}
+
+.bar-chart .bar-track {
+  display: inline-block;
+  width: calc(100% - 230px);
+  background: #eef1f4;
+  height: 16px;
+  vertical-align: middle;
+}
+
+.bar-chart .bar {
+  background: #337ab7;
+  height: 16px;
+}
+
+.bar-chart .bar-value {
+  width: 110px;
+  display: inline-block;
+  text-align: right;
+}
+
+/* timesheets */
+.timesheet-grid input {
+  width: 70px;
+  text-align: right;
+}
+
+.timesheet-grid .day-name {
+  font-size: 11px;
+  color: #777;
+}
+
+.status-label {
+  min-width: 70px;
+  display: inline-block;
+}
+
+/* payslip */
+.payslip {
+  background: #fff;
+  border: 1px solid #dde1e6;
+  padding: 25px 30px;
+}
+
+.payslip h2 {
+  margin-top: 0;
+}
+
+.payslip .net-row td {
+  font-size: 18px;
+  font-weight: bold;
+  border-top: 2px solid #333;
+}
+
+.app-footer {
+  margin-top: 30px;
+}
+
+.has-error .help-block {
+  margin-bottom: 0;
+}
+
+.modal .form-group:last-child {
+  margin-bottom: 0;
+}
+
+#flash {
+  position: relative;
+}
+
+#flash .alert {
+  margin-bottom: 15px;
+}
+
+.stat .stat-value.small-stat {
+  font-size: 18px;
+  line-height: 37px;
+}

@@ -1,0 +1,102 @@
+<div class="page-header">
+  <h1>Dashboard <small>Welcome back, <%- user.name.split(' ')[0] %></small></h1>
+</div>
+
+<div class="row">
+  <div class="col-sm-3">
+    <div class="stat" id="stat-headcount">
+      <div class="stat-label"><%- user.role === 'employee' ? 'My status' : 'Active headcount' %></div>
+      <div class="stat-value"><%- user.role === 'employee' ? (d.headcount ? 'Active' : 'Inactive') : d.headcount %></div>
+    </div>
+  </div>
+  <div class="col-sm-3">
+    <div class="stat" id="stat-last-payroll">
+      <% if (user.role === 'employee') { %>
+        <div class="stat-label">My last net pay</div>
+        <div class="stat-value"><%- d.lastPayslip ? fmt.money(d.lastPayslip.net) : '-' %></div>
+      <% } else { %>
+        <div class="stat-label">Last payroll (gross)</div>
+        <div class="stat-value"><%- d.lastPayRun ? fmt.money(d.lastPayRun.totals.gross) : '-' %></div>
+        <% if (d.lastPayRun) { %><small class="text-muted"><%- d.lastPayRun.name %></small><% } %>
+      <% } %>
+    </div>
+  </div>
+  <div class="col-sm-3">
+    <div class="stat" id="stat-pending">
+      <% if (user.role === 'employee') { %>
+        <div class="stat-label">Timesheets to submit</div>
+        <div class="stat-value"><a href="#timesheets"><%- d.myDraftTimesheets %></a></div>
+      <% } else { %>
+        <div class="stat-label">Pending timesheets</div>
+        <div class="stat-value"><a href="#timesheets"><%- d.pendingTimesheets %></a></div>
+      <% } %>
+    </div>
+  </div>
+  <div class="col-sm-3">
+    <div class="stat" id="stat-next-pay">
+      <div class="stat-label">Next pay date</div>
+      <div class="stat-value"><%- fmt.date(d.nextPayDate) %></div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <% if (user.role !== 'employee') { %>
+  <div class="col-md-7">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Payroll cost by department<% if (d.lastPayRun) { %> &ndash; <%- d.lastPayRun.name %><% } %></h3>
+      </div>
+      <div class="panel-body bar-chart">
+        <% _.each(d.departments, function (row) { %>
+        <div class="bar-row">
+          <span class="bar-label"><%- row.name %></span>
+          <span class="bar-track"><div class="bar" style="width: <%- Math.round(row.gross / maxGross * 100) %>%"></div></span>
+          <span class="bar-value"><%- fmt.money(row.gross) %></span>
+        </div>
+        <% }); %>
+      </div>
+      <table class="table table-condensed">
+        <thead><tr><th>Department</th><th class="num">Active employees</th><th class="num">Gross</th></tr></thead>
+        <tbody>
+        <% _.each(d.departments, function (row) { %>
+          <tr><td><%- row.name %></td><td class="num"><%- row.headcount %></td><td class="num"><%- fmt.money(row.gross) %></td></tr>
+        <% }); %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <% } %>
+
+  <div class="<%- user.role === 'employee' ? 'col-md-8' : 'col-md-5' %>">
+    <div class="panel panel-default">
+      <div class="panel-heading"><h3 class="panel-title">Quick links</h3></div>
+      <div class="list-group">
+        <% if (user.role === 'employee') { %>
+          <a class="list-group-item" href="#me">My profile and payslips</a>
+          <a class="list-group-item" href="#timesheets/new">Enter this week's timesheet</a>
+          <% if (d.lastPayslip) { %><a class="list-group-item" href="#payslips/<%- d.lastPayslip.id %>">Latest payslip</a><% } %>
+        <% } %>
+        <% if (can('timesheets:decide')) { %><a class="list-group-item" href="#timesheets">Review submitted timesheets</a><% } %>
+        <% if (can('payruns:manage')) { %><a class="list-group-item" href="#payruns">Run payroll</a><% } %>
+        <% if (can('employees:edit')) { %><a class="list-group-item" href="#employees/new">Add an employee</a><% } %>
+        <% if (can('reports:view')) { %><a class="list-group-item" href="#reports">Payroll cost report</a><% } %>
+      </div>
+    </div>
+
+    <% if (d.recentActivity) { %>
+    <div class="panel panel-default">
+      <div class="panel-heading"><h3 class="panel-title">Recent activity</h3></div>
+      <ul class="list-group">
+        <% _.each(d.recentActivity, function (a) { %>
+        <li class="list-group-item">
+          <small class="text-muted pull-right"><%- fmt.dateTime(a.at) %></small>
+          <strong><%- a.userEmail %></strong> <%- a.action %> <%- a.entity %>
+          <div class="text-muted small"><%- a.details %></div>
+        </li>
+        <% }); %>
+      </ul>
+    </div>
+    <% } %>
+  </div>
+</div>

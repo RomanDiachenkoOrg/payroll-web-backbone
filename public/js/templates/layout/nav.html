@@ -1,0 +1,41 @@
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <% if (loggedIn) { %>
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-navbar" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <% } %>
+      <a class="navbar-brand" href="#"><span class="glyphicon glyphicon-usd"></span>Acme Payroll</a>
+    </div>
+    <% if (loggedIn) { %>
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav main-menu">
+        <% _.each(items, function (item) { %>
+        <li data-section="<%- item.section %>"><a href="<%- item.href %>"><%- item.label %></a></li>
+        <% }); %>
+      </ul>
+      <ul class="nav navbar-nav navbar-right user-menu">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" id="user-menu-toggle">
+            <span class="glyphicon glyphicon-user"></span>
+            <%- user.name %> <span class="role label label-default"><%- roleName %></span>
+            <span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="user-menu-toggle">
+            <li class="dropdown-header"><%- user.email %></li>
+            <% if (user.employeeId) { %>
+            <li><a href="#employees/<%- user.employeeId %>">My profile &amp; payslips</a></li>
+            <% } %>
+            <li role="separator" class="divider"></li>
+            <li><a href="#logout" id="logout-link">Sign out</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <% } %>
+  </div>
+</nav>
